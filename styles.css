@@ -1,0 +1,292 @@
+.main-body-container .profile-box-inner, .main-body-container .project-box-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div {
+  font-family: 'Lato', sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.full-width {
+  width: 100%;
+}
+.bg-primary-grey {
+  background-color: #a7acb9;
+}
+.header {
+  width: 100%;
+  height: 124px;
+  background: #253050;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.logo-container .sub {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.menu {
+  display: flex;
+}
+.menu-item {
+  padding: 0.5rem;
+}
+.menu-item a {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+.header-menu-container {
+  padding: 1rem;
+  max-width: 1070px;
+  margin: auto;
+  height: 100%;
+}
+.main-body-container {
+  max-width: 1070px;
+  margin: auto;
+}
+.link-btn {
+  height: 51px;
+  width: 300px;
+  font-size: 1.5rem;
+}
+.link-btn-project {
+  height: 51px;
+  width: 300px;
+  font-size: 1.5rem;
+}
+.home-hero {
+  max-height: 702px;
+  overflow: hidden;
+}
+.home-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.white-line-separator {
+  height: 1px;
+  background: white;
+}
+.main-body-container .profile-box-inner .link-btn, .main-body-container .project-box-inner .link-btn-project {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-container .profile-box-inner .link-btn a, .main-body-container .project-box-inner .link-btn-project a {
+  color: white;
+}
+.main-body-container .profile-box-inner, .main-body-container .project-box-inner {
+  height: calc(100% - 64px);
+  margin: 32px;
+  border: 1px solid #ecbc2b;
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  flex-direction: column;
+}
+.main-body-container .profile-box-inner > div, .main-body-container .project-box-inner > div {
+  padding: 2rem;
+  text-align: center;
+}
+.main-body-container {
+  padding: 0 0.5rem;
+}
+.main-body-container img {
+  display: block;
+}
+.main-body-container .profile-image {
+  width: 100%;
+  height: auto;
+}
+.main-body-container .full-width > div {
+  width: 100%;
+  height: 100%;
+}
+.main-body-container .link-btn, .main-body-container .link-btn-project {
+  cursor: pointer;
+}
+.main-body-container .profile-box-inner .link-btn {
+  background: #ecbc2b;
+  margin-top: 4rem;
+}
+.main-body-container .profile-box, .main-body-container .project-box {
+  height: 100%;
+}
+.main-body-container .project-box-inner {
+  color: white;
+  border: 1px solid white;
+}
+.main-body-container .project-box-inner .link-btn-project {
+  margin-top: 4rem;
+  background: #75b7fa;
+}
+.review-container {
+  margin: 4rem 0 0 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5rem;
+}
+.review-write {
+  font-weight: bold;
+  color: #ecbc2b;
+  float: right;
+  margin-top: 2rem;
+}
+.review-block {
+  margin: 0.5rem 0;
+}
+.testi-contact-container {
+  width: 100%;
+  height: 260px;
+  background-color: #253050;
+  margin-top: 76px;
+}
+.testi-contact-container-inner {
+  border: 1px solid white;
+  padding: 32px;
+  height: 100%;
+}
+.testi-contact-container-inner > div {
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid white;
+}
+.white-line {
+  height: 1px;
+  width: 100%;
+  background: white;
+}
+.testimonial-link-container, .white-line-container, .contact-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial-link-container a, .white-line-container a, .contact-link-container a {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+}
+.footer {
+  padding-top: 2.5rem;
+}
+.footer .menu-header-container .menu {
+  padding: 0 0.5rem;
+  flex-direction: column;
+}
+.footer .menu-header-container .menu-item {
+  padding: 0 0 0.25rem 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.footer .menu-header-container a {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: black;
+}
+.footer-office {
+  font-weight: 400;
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+.address {
+  margin-top: 0.25rem;
+}
+.address > div {
+  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.3rem;
+}
+.reserve {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #878787;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1400px) {
+  .home-hero img {
+    transform: translateY(-7vw);
+  }
+}
+@media (max-width: 1035px) and (min-width: 900px) {
+  .profile-image {
+    min-height: 380px;
+    height: 100% !important;
+  }
+}
+@media (max-width: 900px) and (min-width: 47.9em) {
+  .main-body-container .profile-image {
+    height: 340px !important;
+  }
+  .main-body-container .profile-project-col {
+    height: 340px !important;
+  }
+  .main-body-container .link-btn, .main-body-container .link-btn-project {
+    height: 48px;
+    width: 240px;
+    margin-top: 2rem !important;
+  }
+  .main-body-container .link-btn a, .main-body-container .link-btn-project a {
+    font-size: 1.3rem;
+  }
+  .main-body-container .profile-box-inner, .main-body-container .project-box-inner {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 47.9em) {
+  .main-body-container {
+    padding: 0;
+  }
+  .main-body-container .full-width > div {
+    width: 100%;
+    height: auto;
+  }
+  .main-body-container .link-btn, .main-body-container .link-btn-project {
+    width: 200px;
+  }
+  .main-body-container .link-btn a, .main-body-container .link-btn-project a {
+    font-size: 1.2rem;
+  }
+  .main-body-container .project-box-inner, .main-body-container .profile-box-inner {
+    font-size: 1.2rem;
+  }
+  .review-container {
+    padding: 0 2.5rem;
+  }
+  .logos-container {
+    margin: 0.5rem 0;
+  }
+  .reserve {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 599px) {
+  .testi-contact-container-inner .white-line-container {
+    display: none;
+  }
+  .testi-contact-container-inner > div > div {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}

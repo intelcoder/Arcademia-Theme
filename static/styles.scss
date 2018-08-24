@@ -1,0 +1,362 @@
+
+
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+
+// colors
+$primary-blue: #253050;
+$primary-light-blue: #75b7fa;
+$primary-yellow: #ecbc2b;
+$primary-grey: #a7acb9;
+$primary-dark-grey: #878787;
+
+// sizes
+$max-width-size: 1070px;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%responsive-image {
+  width: 100%;
+  height: auto;
+}
+div {
+  font-family: $secondary-font;
+}
+// set default style 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.full-width {
+  width: 100%;
+}
+.bg-primary-grey {
+  background-color: $primary-grey;
+}
+.header {
+  width: 100%;
+  height: 124px;
+  background:$primary-blue;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  .sub {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+.menu {
+  display: flex;
+}
+.menu-item {
+  padding: 0.5rem;
+  a {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    color: white;
+  }
+}
+
+.header-menu-container {
+  padding: 1rem;
+  max-width: $max-width-size;
+  margin: auto;
+  height: 100%;
+}
+.main-body-container {
+  max-width: $max-width-size;
+  margin: auto;
+}
+.link-btn {
+  height: 51px;
+  width: 300px;
+  font-size: 1.5rem;
+}
+.link-btn-project {
+  height: 51px;
+  width: 300px;
+  font-size: 1.5rem;
+}
+
+// home page classes
+.home-hero {
+  max-height: 702px; 
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.white-line-separator {
+  height: 1px;
+  background: white;
+}
+
+%arrow-link-button {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: white;
+  }
+}
+%profile-project-inner {
+  @extend %flex-center;
+  height: calc(100% - 64px);
+  margin: 32px;
+  border: 1px solid #ecbc2b;
+  font-size: 1.5rem;
+  font-family: $secondary-font;
+
+  flex-direction: column;
+  > div {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+.main-body-container {
+  padding: 0 0.5rem;
+  img {
+    display: block;
+  }
+  .profile-image {
+    width: 100%;
+    height: auto;
+  }
+  .full-width {
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .link-btn, .link-btn-project {
+    cursor: pointer;
+    &:hover {
+      
+    }
+  }
+  .profile-box-inner {
+    @extend %profile-project-inner;
+    .link-btn {
+      @extend %arrow-link-button;
+      background: $primary-yellow;
+      margin-top: 4rem;
+    }
+   
+  }
+  .profile-box, .project-box {
+    height: 100%;
+  
+  }
+  .project-box-inner {
+    @extend %profile-project-inner;
+    color: white;
+    border: 1px solid white;
+    .link-btn-project {
+      @extend %arrow-link-button;
+      margin-top: 4rem;
+      background: $primary-light-blue;
+    }
+  }
+}
+
+.review-container {
+  margin: 4rem 0 0 0;
+
+  font-family: $secondary-font;
+  line-height: 1.5rem;
+}
+.review-write {
+  font-weight: bold;
+  color: $primary-yellow;
+  float:right;
+  margin-top: 2rem;
+}
+.review-block {
+  margin: 0.5rem 0;
+}
+
+.testi-contact-container {
+  width: 100%;
+  height: 260px;
+  background-color: $primary-blue;
+  
+  margin-top: 76px;
+}
+.testi-contact-container-inner {
+  border: 1px solid white;
+  padding: 32px;
+  height: 100%;
+  > div {
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid white;
+  }
+}
+.white-line {
+  height: 1px;
+  width: 100%;
+  background: white;
+}
+
+.testimonial-link-container, .white-line-container, .contact-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-family: $primary-font;
+    color: white;
+    font-size: 25px;
+    font-weight: 300
+  }
+}
+
+
+// Footer
+
+.footer {
+ 
+  padding-top: 2.5rem;
+  .menu-header-container {
+    .menu {
+      padding: 0 0.5rem;
+      flex-direction: column;
+    }
+    .menu-item {
+      padding: 0 0 0.25rem 0;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: black;
+    }
+  }
+}
+.footer-office {
+  font-weight: 400;
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+  font-family: $primary-font;
+  letter-spacing: 2px;
+}
+.address {
+  margin-top: 0.25rem;
+  > div {
+    font-size: 0.9rem;
+    font-family: $secondary-font;
+    line-height: 1.3rem;
+  }
+}
+.reserve {
+  text-align: center;
+  font-family: $primary-font;
+  color: $primary-dark-grey;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1400px) {
+  .home-hero {
+    img {
+      transform: translateY(-7vw);
+    }
+  }
+}
+
+@media (max-width: 1035px) and (min-width: 900px) {
+  .profile-image {
+    min-height:380px;
+    height: 100% !important;
+  }
+}
+
+@media (max-width:  900px) and (min-width: 47.9em) {
+  .main-body-container {
+    .profile-image {
+      height:340px !important;
+    
+    }
+    .profile-project-col {
+      height: 340px !important;
+    }
+    .link-btn, .link-btn-project {
+      height: 48px;
+      width: 240px;
+      margin-top: 2rem !important;
+      a {
+        font-size: 1.3rem;
+      }
+    }
+    .profile-box-inner, .project-box-inner {
+      font-size: 1.3rem;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 47.9em) {
+  .main-body-container {
+    padding: 0;
+    .full-width {
+      > div {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .link-btn, .link-btn-project {
+   
+      width: 200px;
+      a {
+        font-size: 1.2rem;
+      }
+    }
+    .project-box-inner, .profile-box-inner {
+      font-size: 1.2rem;
+    }
+  }
+  .review-container {
+    padding: 0 2.5rem;
+  }
+  .logos-container {
+    margin: 0.5rem 0;
+  }
+  .reserve {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .testi-contact-container-inner {
+    .white-line-container { display: none; }
+    > div {
+      > div {
+        max-width: 100%;;
+        flex-basis: 100%;
+      }
+    }
+  }
+
+}
