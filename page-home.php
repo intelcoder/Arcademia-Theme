@@ -6,6 +6,7 @@
  * @subpackage  Arcademia Theme
  * @since  Arcademia Theme 1.0
  */
+
 get_header();
 $heroImageSrc = get_header_image();
 ?>
@@ -16,15 +17,15 @@ $heroImageSrc = get_header_image();
   <div class="profile-project-container row no-margin">
     <div class="row full-width  no-margin">
       <div class="col-sm-6 col-md-6 no-padding">
-        <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_profile_image_setting' ) ); ?>"/>
+        <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_profile_image' ) ); ?>"/>
       </div>
       <div class="col-sm-6 col-md-6 no-padding profile-project-col">
         <div class="profile-box">
             <div class="profile-box-inner">
               <div>
-                <?php echo get_theme_mod('home_profile_box_text_setting') ?>
+                <?php echo get_theme_mod('homepage_heading') ?>
                 <div class="link-btn ">
-                  <a>OUR PROFILE <span>></span></a>
+                  <a href="contact"><?php echo get_theme_mod('home_profile_button_text') ?> <span>></span></a>
                 </div>
               </div>
             </div>
@@ -38,9 +39,9 @@ $heroImageSrc = get_header_image();
         <div class="project-box">
             <div class="project-box-inner">
               <div>
-                <?php echo get_theme_mod('home_profile_box_text_setting') ?>
+                <?php echo get_theme_mod('home_project_box_text_setting') ?>
                 <div class="link-btn-project">
-                  <a>OUR PROJECT <span>></span></a>
+                  <a href="/projects">OUR PROJECT <span>></span></a>
                 </div>
               </div>
             </div>
@@ -60,26 +61,18 @@ $heroImageSrc = get_header_image();
     
       ?>
       <div class="col-sm-4 col-md-4 review-block">
-        <div><?php echo($meta['review'][0]); ?></div>
-        <div class="review-write">- <?php echo($meta['reviewer'][0]); ?></div>
+        <div class="review"><?php echo($meta['review'][0]); ?></div>
+        <div class="review-writer">- <?php echo($meta['reviewer'][0]); ?></div>
       </div>
     <?php endwhile; ?>
   </div>
-  <div class="testi-contact-container">
-    <div class="testi-contact-container-inner row no-margin">
-      <div class="row no-margin ">
-        <div class="col-xs-6 col-sm-4 col-md-4 testimonial-link-container">
-          <a href="/testimonials">MORE TESTIMONIALS <span>></span></a>
-        </div>
-        <div class="col-xs-0 col-sm-4 col-md-4 white-line-container">
-          <div class="white-line"></div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-4 contact-link-container">
-          <a href="/contact">CONTACT US <span>></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php 
+    $left['link'] = "/testimonials";
+    $left['label'] = 'MORE TESTIMONIALS';
+    $right['link'] = "/contact";
+    $right['label'] = 'CONTACT US';
+    include(locate_template('template-parts/page-bottom-links.php'));
+  ?>
 </div>
 
 

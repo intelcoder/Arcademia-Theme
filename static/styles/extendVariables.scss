@@ -1,0 +1,44 @@
+
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Primary font Oswald
+%pirmary-font-light {
+  font-family: $primary-font;
+  font-weight: 300;
+}
+%pirmary-font-medium {
+  font-family: $primary-font;
+  font-weight: 500;
+}
+%pirmary-font-regular {
+  font-family: $primary-font;
+  font-weight: 400;
+}
+
+// Secondary font Lato
+%secondary-font-light {
+  font-family: $secondary-font;
+  font-weight: 300;
+}
+%secondary-font-medium {
+  font-family: $secondary-font;
+  font-weight: 500;
+}
+%secondary-font-regular {
+  font-family: $secondary-font;
+  font-weight: 400;
+}
+%responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+%flex-center-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,28 +1,18 @@
 
+@import 'normalize.scss';
+@import 'flexboxGrid.scss';
+@import './styles/variables.scss';
+@import './styles/extendVariables.scss';
+@import './styles/header.scss';
+@import './styles/hamburger.scss';
 
-$primary-font: 'Oswald', sans-serif;
-$secondary-font: 'Lato', sans-serif;
-
-// colors
-$primary-blue: #253050;
-$primary-light-blue: #75b7fa;
-$primary-yellow: #ecbc2b;
-$primary-grey: #a7acb9;
-$primary-dark-grey: #878787;
-
-// sizes
-$max-width-size: 1070px;
-
-%flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.section-title {
+  @extend %pirmary-font-medium;
+  font-size: 33px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
 }
 
-%responsive-image {
-  width: 100%;
-  height: auto;
-}
 div {
   font-family: $secondary-font;
 }
@@ -36,6 +26,20 @@ a {
   color: initial;
   text-decoration: none;
 }
+// Shared Class
+.img-bg-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+}
+.bg-img {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
 .no-margin {
   margin: 0;
 }
@@ -48,41 +52,7 @@ a {
 .bg-primary-grey {
   background-color: $primary-grey;
 }
-.header {
-  width: 100%;
-  height: 124px;
-  background:$primary-blue;
-}
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  .sub {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-}
 
-.menu {
-  display: flex;
-}
-.menu-item {
-  padding: 0.5rem;
-  a {
-    font-size: 23px;
-    text-transform: uppercase;
-    font-family: $primary-font;
-    color: white;
-  }
-}
-
-.header-menu-container {
-  padding: 1rem;
-  max-width: $max-width-size;
-  margin: auto;
-  height: 100%;
-}
 .main-body-container {
   max-width: $max-width-size;
   margin: auto;
@@ -114,6 +84,7 @@ a {
 }
 
 %arrow-link-button {
+  @extend %flex-center-vh;
   margin: auto;
   display: flex;
   align-items: center;
@@ -138,7 +109,7 @@ a {
 }
 
 .main-body-container {
-  padding: 0 0.5rem;
+  position: relative;
   img {
     display: block;
   }
@@ -160,10 +131,13 @@ a {
   }
   .profile-box-inner {
     @extend %profile-project-inner;
+    @extend %pirmary-font-light;
     .link-btn {
       @extend %arrow-link-button;
+      @extend %pirmary-font-light;
       background: $primary-yellow;
       margin-top: 4rem;
+      letter-spacing: 2px;
     }
    
   }
@@ -173,12 +147,15 @@ a {
   }
   .project-box-inner {
     @extend %profile-project-inner;
+    @extend %pirmary-font-light;
     color: white;
     border: 1px solid white;
     .link-btn-project {
       @extend %arrow-link-button;
+      @extend %pirmary-font-light;
       margin-top: 4rem;
       background: $primary-light-blue;
+      letter-spacing: 2px;
     }
   }
 }
@@ -189,7 +166,12 @@ a {
   font-family: $secondary-font;
   line-height: 1.5rem;
 }
-.review-write {
+.review {
+  @extend %secondary-font-light;
+  font-size: 16px;
+  font-height: 25px;
+}
+.review-writer {
   font-weight: bold;
   color: $primary-yellow;
   float:right;
@@ -227,10 +209,21 @@ a {
   justify-content: center;
   align-items: center;
   a {
+    display: flex;
     font-family: $primary-font;
     color: white;
+    letter-spacing: 2px;
     font-size: 25px;
-    font-weight: 300
+    font-weight: 300;
+    &:hover {
+      .arrow {
+        transform: translateX(3px);
+        transition: transform 0.25s;
+      }
+    }
+  }
+  .arrow {
+    transition: transform 0.25s;
   }
 }
 
@@ -277,6 +270,206 @@ a {
   font-family: $primary-font;
   color: $primary-dark-grey;
   margin-bottom: 60px;
+  font-size: 0.9rem;
+}
+
+// Testimonial page 
+
+.title-box {
+  @extend %flex-center-vh;
+  width: 635px;
+  height: 190px;
+  padding-bottom: 2rem;
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-transform: uppercase;
+}
+.title-box-inner {
+  @extend %flex-center-vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 25px;
+  border: 1px solid $primary-light-blue;
+  height: 100%;
+
+  text-transform: uppercase;
+
+}
+.title-box-sub {
+  letter-spacing: 3px;
+  color: $primary-light-blue;
+  font-size: 33px;
+  font-family: $primary-font;
+  font-weight: 500;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+.title-box-title {
+  letter-spacing: 14px;
+  font-size: 66px;
+  font-weight: bold;
+  font-family: $primary-font;
+}
+
+.testimonial-container {
+  max-width: $max-content-width;
+  margin: 1rem auto;
+}
+.testimonial {
+  width: 100%;
+  margin-bottom: 1rem;
+  .content {
+    font-size: 20px;
+    font-family: $secondary-font;
+    font-weight: 300;
+  }
+}
+.testimonial-writer {
+  text-align: right;
+  margin-top:  20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.featured-in-container {
+  
+  .white-line {
+    background: $primary-yellow;
+  }
+}
+.featured-in {
+  color: $primary-yellow;
+  letter-spacing: 12px;
+  font-family: $primary-font;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+// #Project
+
+.project-block {
+  margin: 0 auto 70px auto;
+  max-width: 886px;
+  .project-block-image-container {
+    position: relative;
+    height: 335px;
+    width: 440px;
+  }
+  .project-block-contents {
+    width: calc(100% - 440px);
+  }
+}
+.project-block-inner {
+  padding: 80px 0 0 100px;
+  .title {
+    font-family: $primary-font;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+}
+.project-detail-container {
+  margin-top: 40px;
+  div {
+    @extend %pirmary-font-light;
+    font-size: 25px;
+    padding: 0.25rem 0;
+  }
+}
+
+
+// Contact page 
+.contact-page {
+  margin: 0 auto;
+  max-width: $max-content-width;
+  margin-top: -2rem;
+}
+.address-container {
+  margin-bottom: 40px;
+  div {
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 25px;
+  }
+}
+.contact-heading {
+  @extend %pirmary-font-medium;
+  font-size: 25px;
+  & + span{
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 25px;
+   
+  }
+}
+.location-block {
+  margin-bottom: 40px;
+}
+.contact-inputs {
+  input, textarea {
+    width: calc(100% - 1rem);
+    height: 34px;
+    margin-bottom: 25px;
+    padding: 0 0.5rem;
+    border: 1px solid $primary-light-blue;
+    resize: none;
+  }
+  textarea {
+    padding-top: 0.5rem;
+    height: 130px;
+  }
+  .send-button {
+    @extend %flex-center;
+    @extend %pirmary-font-light;
+    border: 0;
+    background-color: $primary-light-blue;
+    padding: 0.25rem 1.3rem;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .send-button-container {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+}
+// Profile page
+.profile-bg-section {
+  height: 525px;
+  position: relative;
+}
+.profile-text {
+  @extend %secondary-font-light;
+  font-size: $large-content-font-size;
+  line-height: 33px;
+  margin: 70px 0;
+}
+.profile-page-container {
+  margin-top: -7rem;
+}
+.bg-text {
+  @extend %pirmary-font-medium;
+  font-size: 33px;
+  position: absolute;
+  color: white;
+  top: 50%; 
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.large-screen-header {
+
+}
+.small-screen-header {
+
 }
 @media screen and (min-width: 1400px) {
   .home-hero {
@@ -292,8 +485,37 @@ a {
     height: 100% !important;
   }
 }
+@media screen and (max-width: 63.9em) {
+  .testimonial-container {
+    padding: 0 0.5rem;
+  }
+  // #Project
+  .project-block {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 1rem 0;;
+    .project-block-image-container {
+      position: relative;
+      height: 335px;
+      width: 100%;
+    }
+    .project-block-inner {
+      padding: 0;
+    }
+    .project-block-contents {
+      width: 100%;
+    }
+  }
+
+}
 
 @media (max-width:  900px) and (min-width: 47.9em) {
+  .large-screen-header {
+    display: inherit;
+  }
+  .small-screen-header {
+    display: none;
+  }
   .main-body-container {
     .profile-image {
       height:340px !important;
@@ -314,10 +536,17 @@ a {
       font-size: 1.3rem;
     }
   }
+
   
 }
 
 @media screen and (max-width: 47.9em) {
+  .large-screen-header {
+    display: none;
+  }
+  .small-screen-header {
+    display: inherit;
+  }
   .main-body-container {
     padding: 0;
     .full-width {
@@ -340,9 +569,7 @@ a {
   .review-container {
     padding: 0 2.5rem;
   }
-  .logos-container {
-    margin: 0.5rem 0;
-  }
+
   .reserve {
     text-align: left;
   }
