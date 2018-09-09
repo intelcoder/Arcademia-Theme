@@ -9,6 +9,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" />
@@ -36,10 +37,14 @@
       </div>
     </div>
     <div id="mobile-menu-container" class="small-screen-menu">
-         <div class="mobile-menu">
-           <?php wp_nav_menu();?>
-         </div>
+      <div class="mobile-menu">
+        <?php wp_nav_menu();?>
+      </div>
+      <div class="mobile-menu-footer">
+        <?php include(locate_template('template-parts/address.php')); ?>
+      </div>
+         
   
-       </div>
+    </div>
   </div>
 </header>

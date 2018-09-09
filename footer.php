@@ -7,18 +7,13 @@
  */
   $args = array('post_type' => 'locations');
   $query = new WP_Query($args);
-  $location = $query ->posts[0];
-  $meta = get_post_meta( get_the_ID() );
+  $location = $query -> posts[0];
 ?>
 
  <div class="footer main-body-container row no-margin no-padding">
    <div class="col-xs-12 col-sm-4 col-md-4">
-    <div class="footer-office"><?php echo(get_the_title())?></div>
-    <div class="address">
-      <div><?php echo($meta['address'][0]) ?></div>
-      <div><?php echo($meta['city'][0]) ?>, <?php echo($meta['postal_code'][0]) ?></div>
-      <div><?php echo($meta['phone'][0]) ?></div>
-    </div>
+      <div class="footer-office"><?php echo(get_the_title())?></div>
+      <?php include(locate_template('template-parts/address.php')); ?>
    </div>
    <div class="logos-container col-xs-12 col-sm-4 col-md-4 center-md center-sm middle-md middle-sm">
      logo shit

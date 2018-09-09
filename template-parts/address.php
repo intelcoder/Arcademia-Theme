@@ -2,8 +2,8 @@
   $args = array('post_type' => 'locations');
   $query = new WP_Query($args);
   $location = $query ->posts[0];
-  $meta = get_post_meta( get_the_ID() );
-  var_dump($meta);
+  $meta = get_post_meta( $location -> ID );
+
 ?>
 
 <div class="address">

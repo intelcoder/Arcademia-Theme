@@ -57,12 +57,12 @@ $heroImageSrc = get_header_image();
         $args = array('post_type' => 'reviews');
         $query = new WP_Query($args);
         while($query -> have_posts()) : $query -> the_post();
-        $meta = get_post_meta( get_the_ID() );
+        $reviewMeta = get_post_meta( get_the_ID() );
     
       ?>
       <div class="col-sm-4 col-md-4 review-block">
-        <div class="review"><?php echo($meta['review'][0]); ?></div>
-        <div class="review-writer">- <?php echo($meta['reviewer'][0]); ?></div>
+        <div class="review"><?php echo($reviewMeta['review'][0]); ?></div>
+        <div class="review-writer">- <?php echo($reviewMeta['reviewer'][0]); ?></div>
       </div>
     <?php endwhile; ?>
   </div>
