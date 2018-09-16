@@ -1,0 +1,77 @@
+
+// Contact page 
+.contact-page {
+  margin: 0 auto;
+  max-width: $max-content-width;
+  margin-top: -2rem;
+}
+.address-container {
+  margin-bottom: 40px;
+  div {
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 25px;
+  }
+}
+.contact-heading {
+  @extend %pirmary-font-medium;
+  font-size: 25px;
+  & + span{
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 25px;
+   
+  }
+}
+.location-block {
+  margin-bottom: 40px;
+}
+.contact-inputs {
+  margin-top: 118px !important;
+  input, textarea {
+    width: calc(100% - 1rem);
+    height: 34px;
+    margin-bottom: 25px;
+    padding: 0 0.5rem;
+    border: 1px solid $primary-light-blue;
+    resize: none;
+  }
+  textarea {
+    padding-top: 0.5rem;
+    height: 130px;
+  }
+  .send-button {
+    @extend %flex-center;
+    @extend %pirmary-font-light;
+    border: 0;
+    background-color: $primary-light-blue;
+    padding: 0.25rem 1.3rem;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 2px;
+  }
+  .send-button-container {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+}
+@media screen and (max-width: $large-screen-break) {
+  .contact-inputs {
+    max-width: 574px;
+    margin: 118px auto 0 auto !important;
+  }
+   
+  .location-block {
+    max-width: 400px;
+    padding: 0 1rem;
+    margin: auto !important;
+
+  }
+}
+@media (max-width: $small-screen-break) {
+
+  .contact-inputs {
+    padding: 0 1rem;
+  }
+}

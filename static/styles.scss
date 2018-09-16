@@ -5,6 +5,11 @@
 @import './styles/extendVariables.scss';
 @import './styles/header.scss';
 @import './styles/hamburger.scss';
+@import './styles/hero.scss';
+@import './styles/heroTextBox.scss';
+@import './styles/contactPage.scss';
+@import './styles/projectBlock.scss';
+
 
 .section-title {
   @extend %pirmary-font-medium;
@@ -68,16 +73,7 @@ a {
   font-size: 1.5rem;
 }
 
-// home page classes
-.home-hero {
-  max-height: 702px; 
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
+
 .white-line-separator {
   height: 1px;
   background: white;
@@ -181,14 +177,14 @@ a {
   margin: 0.5rem 0;
 }
 
-.testi-contact-container {
+.page-link-block {
   width: 100%;
   height: 260px;
   background-color: $primary-blue;
   
   margin-top: 76px;
 }
-.testi-contact-container-inner {
+.page-link-block-inner {
   border: 1px solid white;
   padding: 32px;
   height: 100%;
@@ -268,51 +264,13 @@ a {
 .reserve {
   text-align: center;
   font-family: $primary-font;
-  color: $primary-dark-grey;
+  color: $primary-dark-grey;    
   margin-bottom: 60px;
   font-size: 0.9rem;
 }
 
 // Testimonial page 
 
-.title-box {
-  @extend %flex-center-vh;
-  width: 635px;
-  height: 190px;
-  padding-bottom: 2rem;
-  position: relative;
-  background-color: white;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-transform: uppercase;
-}
-.title-box-inner {
-  @extend %flex-center-vh;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 25px;
-  border: 1px solid $primary-light-blue;
-  height: 100%;
-
-  text-transform: uppercase;
-
-}
-.title-box-sub {
-  letter-spacing: 3px;
-  color: $primary-light-blue;
-  font-size: 33px;
-  font-family: $primary-font;
-  font-weight: 500;
-  text-align: center;
-  margin: 0.25rem 0;
-}
-.title-box-title {
-  letter-spacing: 14px;
-  font-size: 66px;
-  font-weight: bold;
-  font-family: $primary-font;
-}
 
 .testimonial-container {
   max-width: $max-content-width;
@@ -347,96 +305,8 @@ a {
   text-transform: uppercase;
   font-size: 2.4rem;
 }
-// #Project
-
-.project-block {
-  margin: 0 auto 70px auto;
-  max-width: 886px;
-  .project-block-image-container {
-    position: relative;
-    height: 335px;
-    width: 440px;
-  }
-  .project-block-contents {
-    width: calc(100% - 440px);
-  }
-}
-.project-block-inner {
-  padding: 80px 0 0 100px;
-  .title {
-    font-family: $primary-font;
-    text-transform: uppercase;
-    font-size: 33px;
-    font-weight: 400;
-    letter-spacing: 3px;
-  }
-}
-.project-detail-container {
-  margin-top: 40px;
-  div {
-    @extend %pirmary-font-light;
-    font-size: 25px;
-    padding: 0.25rem 0;
-  }
-}
 
 
-// Contact page 
-.contact-page {
-  margin: 0 auto;
-  max-width: $max-content-width;
-  margin-top: -2rem;
-}
-.address-container {
-  margin-bottom: 40px;
-  div {
-    font-family: $secondary-font;
-    font-weight: 300;
-    font-size: 25px;
-  }
-}
-.contact-heading {
-  @extend %pirmary-font-medium;
-  font-size: 25px;
-  & + span{
-    font-family: $secondary-font;
-    font-weight: 300;
-    font-size: 25px;
-   
-  }
-}
-.location-block {
-  margin-bottom: 40px;
-}
-.contact-inputs {
-  input, textarea {
-    width: calc(100% - 1rem);
-    height: 34px;
-    margin-bottom: 25px;
-    padding: 0 0.5rem;
-    border: 1px solid $primary-light-blue;
-    resize: none;
-  }
-  textarea {
-    padding-top: 0.5rem;
-    height: 130px;
-  }
-  .send-button {
-    @extend %flex-center;
-    @extend %pirmary-font-light;
-    border: 0;
-    background-color: $primary-light-blue;
-    padding: 0.25rem 1.3rem;
-    font-size: 25px;
-    color: white;
-    letter-spacing: 2px;
-  }
-  .send-button-container {
-    display: flex;
-    justify-content: flex-end;
-    
-  }
-}
 // Profile page
 .profile-bg-section {
   height: 525px;
@@ -471,41 +341,45 @@ a {
 .small-screen-header {
 
 }
-@media screen and (min-width: 1400px) {
-  .home-hero {
+
+@media screen and(min-width: 1440px) {
+  .hero-image-container {
+    max-height: 702px; 
+  
     img {
       transform: translateY(-7vw);
     }
   }
 }
-
-@media (max-width: 1035px) and (min-width: 900px) {
+@media screen and (max-width: 1035px) and (min-width: 900px) {
   .profile-image {
     min-height:380px;
     height: 100% !important;
   }
 }
+
 @media screen and (max-width: 63.9em) {
   .testimonial-container {
     padding: 0 0.5rem;
   }
-  // #Project
-  .project-block {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 1rem 0;;
-    .project-block-image-container {
-      position: relative;
-      height: 335px;
-      width: 100%;
-    }
-    .project-block-inner {
-      padding: 0;
-    }
-    .project-block-contents {
-      width: 100%;
+  
+  
+  .page-link-block-inner {
+    .white-line {
+      width: 40%;
+      max-width: 220px;
     }
   }
+  .project-blocks-container {
+    & .project-block:last-child {
+      margin: 0;
+    }
+  }
+  .project-blocks-container {
+    align-items: center;
+    flex-direction: column;
+  }
+  
 
 }
 
@@ -541,6 +415,7 @@ a {
 }
 
 @media screen and (max-width: 47.9em) {
+  
   .large-screen-header {
     display: none;
   }
@@ -573,11 +448,36 @@ a {
   .reserve {
     text-align: left;
   }
+
+  .hero-content {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .years-upper-text {
+    font-size: 44px;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    letter-spacing: 8px;
+
+  }
+  .years {
+    font-size: 77px;
+    font-family: $primary-font;
+    font-weight: bold;
+    letter-spacing: 10px;
+  }
+  .year-period {
+    font-size: 33px;
+  }
+
+
+
 }
 
 @media screen and (max-width: 599px) {
-  .testi-contact-container-inner {
-    .white-line-container { display: none; }
+  .page-link-block-inner {
+    .white-line-container {  }
     > div {
       > div {
         max-width: 100%;;

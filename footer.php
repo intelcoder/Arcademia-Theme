@@ -12,7 +12,7 @@
 
  <div class="footer main-body-container row no-margin no-padding">
    <div class="col-xs-12 col-sm-4 col-md-4">
-      <div class="footer-office"><?php echo(get_the_title())?></div>
+      <div class="footer-office"><?php echo($location -> post_title )?></div>
       <?php include(locate_template('template-parts/address.php')); ?>
    </div>
    <div class="logos-container col-xs-12 col-sm-4 col-md-4 center-md center-sm middle-md middle-sm">

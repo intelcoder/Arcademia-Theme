@@ -11,15 +11,27 @@ get_header();
 $heroImageSrc = get_header_image();
 ?>
 <div class="home-hero">
- <img src="<?php echo($heroImageSrc)?>" alt="Acardemia Home Hero"/>
+  <div class="hero-image-container">
+    <img src="<?php echo($heroImageSrc)?>" alt="Acardemia Home Hero"/>
+  </div>
+  <div class="home-hero-content-container">
+      <div class="hero-content">
+        <div class="years-upper-text">celebrating</di>
+        <div class="years">30 YEARS</div>
+        <div>
+          <div></div>
+          <div class="year-period">1988-<?php echo(date('Y'));   ?></div>
+        </div>
+      </div>
+  </div>
 </div>
 <div class="main-body-container">
   <div class="profile-project-container row no-margin">
     <div class="row full-width  no-margin">
-      <div class="col-sm-6 col-md-6 no-padding">
+      <div class="col-sm-6 col-md-6 first-md first-sm no-padding">
         <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_profile_image' ) ); ?>"/>
       </div>
-      <div class="col-sm-6 col-md-6 no-padding profile-project-col">
+      <div class="col-sm-6 col-md-6 first-xs no-padding profile-project-col">
         <div class="profile-box">
             <div class="profile-box-inner">
               <div>
@@ -35,7 +47,7 @@ $heroImageSrc = get_header_image();
   </div>
   <div class="profile-project-container row no-margin">
     <div class="row full-width no-margin">
-      <div class="col-sm-6 col-md-6 no-padding bg-primary-grey profile-project-col">
+      <div class="col-sm-6 col-md-6 first-md first-sm no-padding bg-primary-grey profile-project-col">
         <div class="project-box">
             <div class="project-box-inner">
               <div>
@@ -47,7 +59,7 @@ $heroImageSrc = get_header_image();
             </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-6 no-padding first-xs last-sm">
+      <div class="col-sm-6 col-md-6 no-padding ">
         <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_project_image_setting' ) ); ?>"/>
       </div>
     </div>

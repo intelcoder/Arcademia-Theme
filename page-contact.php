@@ -13,15 +13,10 @@ $heroImageSrc = get_header_image();
  <img src="<?php echo($heroImageSrc)?>" alt="Acardemia Home Hero"/>
 </div>
 <div class="main-body-container">
-  <div class="title-box">
-    <div class="title-box-inner">
-      <div>
-        <div class="title-box-sub">Where To</div>
-        <div class="title-box-title">Find us</div>
-      </div>
-    </div>
-  </div>
-  
+  <?php
+    include(locate_template('template-parts/hero-text-box.php'))
+   ?>
+
   <div class="contact-page">
   <?php
           $args = array('post_type' => 'locations');
