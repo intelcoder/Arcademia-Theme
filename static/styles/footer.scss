@@ -1,0 +1,92 @@
+
+// Footer
+
+.footer {
+  padding: 2.5rem 0 0 0;
+  .menu-header-container {
+    .menu {
+      padding: 0 0.5rem;
+      flex-direction: column;
+    }
+    .menu-item {
+      padding: 0 0 0.25rem 0;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: black;
+    }
+  }
+}
+
+.location {}
+.footer-office {
+  font-weight: 400;
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+  font-family: $primary-font;
+  letter-spacing: 2px;
+}
+.address {
+  margin-top: 0.25rem;
+  > div {
+    font-size: 0.9rem;
+    font-family: $secondary-font;
+    line-height: 1.3rem;
+  }
+}
+.reserve {
+  text-align: center;
+  font-family: $primary-font;
+  color: $primary-dark-grey;    
+  margin-bottom: 60px;
+  font-size: 0.9rem;
+}
+.footer-menu {
+  padding: 0;
+}
+
+@media screen and (max-width: 47.9em) {
+  .location {
+    order: 1;
+    margin-bottom: 55px;
+  }
+  .footer-menu  {
+    order: 2;
+    margin-bottom: 55px;
+  }
+  .logos-container {
+    order: 3;
+  }
+  .reserve {
+    order: 4;
+    margin-top: 55px;
+  }
+  .footer {
+    padding: 80px 0 0 0 !important;
+    .address {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-header-container {
+      .menu {
+        align-items: center;
+      }
+      a {
+        font-size: 18px;
+        color: black;
+      }
+    }
+  }
+  .footer-office {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+
+
+}

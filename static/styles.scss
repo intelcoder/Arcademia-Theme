@@ -4,11 +4,13 @@
 @import './styles/variables.scss';
 @import './styles/extendVariables.scss';
 @import './styles/header.scss';
+@import './styles/footer.scss';
 @import './styles/hamburger.scss';
 @import './styles/hero.scss';
 @import './styles/heroTextBox.scss';
 @import './styles/contactPage.scss';
 @import './styles/projectBlock.scss';
+@import './styles/pageBottomLinkBox.scss';
 
 
 .section-title {
@@ -177,28 +179,6 @@ a {
   margin: 0.5rem 0;
 }
 
-.page-link-block {
-  width: 100%;
-  height: 260px;
-  background-color: $primary-blue;
-  
-  margin-top: 76px;
-}
-.page-link-block-inner {
-  border: 1px solid white;
-  padding: 32px;
-  height: 100%;
-  > div {
-    flex-wrap: wrap;
-    width: 100%;
-    border: 1px solid white;
-  }
-}
-.white-line {
-  height: 1px;
-  width: 100%;
-  background: white;
-}
 
 .testimonial-link-container, .white-line-container, .contact-link-container {
   display: flex;
@@ -223,51 +203,6 @@ a {
   }
 }
 
-
-// Footer
-
-.footer {
- 
-  padding-top: 2.5rem;
-  .menu-header-container {
-    .menu {
-      padding: 0 0.5rem;
-      flex-direction: column;
-    }
-    .menu-item {
-      padding: 0 0 0.25rem 0;
-      font-weight: 400;
-      letter-spacing: 2px;
-    }
-    a {
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: black;
-    }
-  }
-}
-.footer-office {
-  font-weight: 400;
-  margin: 1rem 0rem;
-  font-size: 1.4rem;
-  font-family: $primary-font;
-  letter-spacing: 2px;
-}
-.address {
-  margin-top: 0.25rem;
-  > div {
-    font-size: 0.9rem;
-    font-family: $secondary-font;
-    line-height: 1.3rem;
-  }
-}
-.reserve {
-  text-align: center;
-  font-family: $primary-font;
-  color: $primary-dark-grey;    
-  margin-bottom: 60px;
-  font-size: 0.9rem;
-}
 
 // Testimonial page 
 
@@ -362,14 +297,6 @@ a {
   .testimonial-container {
     padding: 0 0.5rem;
   }
-  
-  
-  .page-link-block-inner {
-    .white-line {
-      width: 40%;
-      max-width: 220px;
-    }
-  }
   .project-blocks-container {
     & .project-block:last-child {
       margin: 0;
@@ -445,9 +372,7 @@ a {
     padding: 0 2.5rem;
   }
 
-  .reserve {
-    text-align: left;
-  }
+  
 
   .hero-content {
     margin: 3rem 0;
@@ -472,18 +397,5 @@ a {
   }
 
 
-
-}
-
-@media screen and (max-width: 599px) {
-  .page-link-block-inner {
-    .white-line-container {  }
-    > div {
-      > div {
-        max-width: 100%;;
-        flex-basis: 100%;
-      }
-    }
-  }
 
 }
