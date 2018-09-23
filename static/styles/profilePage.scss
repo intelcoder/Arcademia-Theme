@@ -1,0 +1,33 @@
+// Profile page
+.profile-bg-section {
+  height: 525px;
+  position: relative;
+}
+.profile-text {
+  @extend %secondary-font-light;
+  font-size: $large-content-font-size;
+  line-height: 33px;
+  margin: 70px 0;
+}
+.profile-page-container {
+  margin: -7rem 0 0 0;
+}
+.bg-text {
+  @extend %pirmary-font-medium;
+  font-size: 33px;
+  position: absolute;
+  color: white;
+  top: 50%; 
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 63.9em) {
+  .profile-page-container {
+    padding: 0 0.5rem;
+  }
+}

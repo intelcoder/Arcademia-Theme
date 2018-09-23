@@ -7,12 +7,17 @@
 @import './styles/footer.scss';
 @import './styles/hamburger.scss';
 @import './styles/hero.scss';
+
 @import './styles/heroTextBox.scss';
-@import './styles/contactPage.scss';
 @import './styles/projectBlock.scss';
 @import './styles/pageBottomLinkBox.scss';
+// pages
+@import './styles/profilePage.scss';
+@import './styles/contactPage.scss';
 
-
+.row {
+  margin: 0;
+}
 .section-title {
   @extend %pirmary-font-medium;
   font-size: 33px;
@@ -180,28 +185,28 @@ a {
 }
 
 
-.testimonial-link-container, .white-line-container, .contact-link-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  a {
-    display: flex;
-    font-family: $primary-font;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 25px;
-    font-weight: 300;
-    &:hover {
-      .arrow {
-        transform: translateX(3px);
-        transition: transform 0.25s;
-      }
-    }
-  }
-  .arrow {
-    transition: transform 0.25s;
-  }
-}
+// .testimonial-link-container, .white-line-container, .contact-link-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   a {
+//     display: flex;
+//     font-family: $primary-font;
+//     color: white;
+//     letter-spacing: 2px;
+//     font-size: 25px;
+//     font-weight: 300;
+//     &:hover {
+//       .arrow {
+//         transform: translateX(3px);
+//         transition: transform 0.25s;
+//       }
+//     }
+//   }
+//   .arrow {
+//     transition: transform 0.25s;
+//   }
+// }
 
 
 // Testimonial page 
@@ -242,33 +247,7 @@ a {
 }
 
 
-// Profile page
-.profile-bg-section {
-  height: 525px;
-  position: relative;
-}
-.profile-text {
-  @extend %secondary-font-light;
-  font-size: $large-content-font-size;
-  line-height: 33px;
-  margin: 70px 0;
-}
-.profile-page-container {
-  margin-top: -7rem;
-}
-.bg-text {
-  @extend %pirmary-font-medium;
-  font-size: 33px;
-  position: absolute;
-  color: white;
-  top: 50%; 
-  width: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 50px;
-}
+
 
 .large-screen-header {
 

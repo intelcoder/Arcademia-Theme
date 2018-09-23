@@ -313,7 +313,34 @@ function locations_post_type() {
             'not_found'          => __('No Location Found', 'arcademia'),
             'not_found_in_trash' => __('No Location found in Trash', 'arcademia')
         ),
-        'description'          => 'Represent location blocks in Contact page',
+        'description'          => 'Represent location blocks in the contact page',
+        'hierarchical'         => false,
+        'menu_icon'            => 'dashicons-networking',
+        'menu_position'        => 5,
+        'public'               => true,
+        'show_in_admin_bar'    => false,
+        'show_in_nav_menus'    => true,
+        'show_ui'              => true,
+        'supports'             => array('title')
+        ));
+}
+
+add_action( 'init', 'contact_manager_post_type' );
+function contact_manager_post_type() {
+    register_post_type( 'manager_contact',
+        array(
+        'labels' => array(
+            'name'               => __('Manager Contacts', 'arcademia'),
+            'singular_name'      => __('Manager Contact', 'arcademia'),
+            'add_new_item'       => __('Add Manager Contact', 'arcademia'),
+            'edit_item'          => __('Edit Manager Contact', 'arcademia'),
+            'new_item'           => __('New Manager Contact', 'arcademia'),
+            'view_item'          => __('View Manager Contact', 'arcademia'),
+            'search_items'       => __('Search Manager Contact', 'arcademia'),
+            'not_found'          => __('No Manager Contact Found', 'arcademia'),
+            'not_found_in_trash' => __('No Manager Contact found in Trash', 'arcademia')
+        ),
+        'description'          => 'Manager contacts in the contact page',
         'hierarchical'         => false,
         'menu_icon'            => 'dashicons-networking',
         'menu_position'        => 5,

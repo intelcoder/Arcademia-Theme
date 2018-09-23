@@ -37,25 +37,51 @@ $heroImageSrc = get_header_image();
         </div>
         <div>
           <div>
-            <span class="contact-heading">T</span>
+            <span class="contact-heading">T&nbsp</span>
             <span><?php echo($meta['phone'][0]) ?></span>
           </div>
           <div>
-            <span class="contact-heading">F</span>
+            <span class="contact-heading">F&nbsp</span>
             <span><?php echo($meta['fax'][0]) ?></span>
           </div>
           <div>
-            <span class="contact-heading">E</span>
+            <span class="contact-heading">E&nbsp</span>
             <span><?php echo($meta['email'][0]) ?></span>
           </div>
         </div>
       </div>
     </div>
     <?php endwhile; ?>
+    
+  <div class="manager-contacts">
+    <?php 
+        $args = array('post_type' => 'manager_contact');
+        $query = new WP_Query($args);
+        while($query -> have_posts()) : $query -> the_post();
+        $meta = get_post_meta( get_the_ID() );
+    ?>
+      <div class="manager-contact">
+        <div>
+          <div class="row manager-title">
+            <div><?php echo $meta['name'][0]?></div>
+            <div class="dash">-</div>
+            <div><?php echo $meta['job_title'][0]?></div>
+          </div>
+        </div>
+        <div>
+          <div class="row manager-contact-info">
+            <div>X <?php echo $meta['extention'][0]?></div>
+            <div>-</div>
+            <div><?php echo $meta['email'][0]?></div>
+          </div>
+        </div>
+      </div>
+    <?php endwhile; ?>
+  </div>
     <div>
       <form class="contact-inputs row no-margin">
         <div class="col-xs-12 col-sm-12 col-md-12 no-padding">
-          <input type="text" placeholder="NANME" />
+          <input type="text" placeholder="NAME" />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 no-padding">
           <input type="email" placeholder="EMAIL" />
@@ -68,10 +94,12 @@ $heroImageSrc = get_header_image();
         </div>
       </form>
     </div>
-    <div>
+    <div class="credit-container">
       <div class="section-title">PHOTOGRAPHY CREDITS</div>
 
     </div>
+
+
   </div>
   <?php 
     $left['link'] = "/profile";
