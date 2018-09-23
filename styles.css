@@ -984,7 +984,7 @@ template {
     order: 1;
   }
 }
-.contact-inputs .send-button, .main-body-container .profile-box-inner, .main-body-container .project-box-inner {
+.logos-container, .contact-inputs .send-button, .main-body-container .profile-box-inner, .main-body-container .project-box-inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1168,6 +1168,18 @@ template {
 }
 .footer-menu {
   padding: 0;
+}
+.logos-container > div {
+  padding: 0 0.5rem;
+}
+.logos-container svg {
+  fill: #ecbc2b;
+  width: 41px;
+  height: 41px;
+}
+.logos-container .instagram-svg svg {
+  width: 47px;
+  height: 47px;
 }
 @media screen and (max-width: 47.9em) {
   .location {

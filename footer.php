@@ -8,6 +8,11 @@
   $args = array('post_type' => 'locations');
   $query = new WP_Query($args);
   $location = $query -> posts[0];
+  function inline_svg($name) {
+    $file = get_template_directory();
+    $file .= "/static/svgs/" . $name . ".svg";
+    include($file);
+  }
 ?>
 
  <div class="footer main-body-container row no-margin">
@@ -16,7 +21,8 @@
       <?php include(locate_template('template-parts/address.php')); ?>
    </div>
    <div class="logos-container col-xs-12 col-sm-4 col-md-4 center-md center-sm middle-md middle-sm">
-     logo shit
+     <div class="facebook-svg"><?php inline_svg('facebook') ?></div>
+     <div class="instagram-svg"><?php inline_svg('instagram') ?></div>
    </div>
    <div class="footer-menu col-xs-12 col-sm-4 col-md-4 end-sm end-md no-padding">
     <?php wp_nav_menu();?>

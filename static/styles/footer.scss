@@ -47,7 +47,22 @@
 .footer-menu {
   padding: 0;
 }
-
+.logos-container {
+  @extend %flex-center;
+  > div {
+    padding: 0 0.5rem;
+  }
+  svg {
+    fill: $primary-yellow;
+    width: 41px;
+    height: 41px;
+  }
+  // instagram icon has some padding
+  .instagram-svg svg {
+    width: 47px;
+    height:47px;
+  }
+}
 @media screen and (max-width: 47.9em) {
   .location {
     order: 1;
