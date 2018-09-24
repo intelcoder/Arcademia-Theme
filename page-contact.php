@@ -25,8 +25,8 @@ $heroImageSrc = get_header_image();
           $meta = get_post_meta( get_the_ID() );
         ?>
     <div class="location-block row no-margin">
-      <div class="col-md-6">
-
+      <div class="col-md-6 google-map">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=215+carlingview+drive&zoom=13&size=352x339&maptype=roadmap&markers=43.683742,-79.5929134" />
       </div>
       <div class="col-md-6">
         <div class="section-title"><?php echo(get_the_title())?></div>
@@ -46,7 +46,7 @@ $heroImageSrc = get_header_image();
           </div>
           <div>
             <span class="contact-heading">E&nbsp</span>
-            <span><?php echo($meta['email'][0]) ?></span>
+            <span><a href="mailto:<?php echo($meta['email'][0]) ?>"><?php echo($meta['email'][0]) ?></a></span>
           </div>
         </div>
       </div>
@@ -65,14 +65,19 @@ $heroImageSrc = get_header_image();
           <div class="row manager-title">
             <div><?php echo $meta['name'][0]?></div>
             <div class="dash">-</div>
-            <div><?php echo $meta['job_title'][0]?></div>
+            <div class="job-extention">
+              <div><?php echo $meta['job_title'][0]?></div>
+              <div class="small-extension"> X <?php echo $meta['extention'][0]?></div>
+            </div>
           </div>
         </div>
         <div>
           <div class="row manager-contact-info">
-            <div>X <?php echo $meta['extention'][0]?></div>
-            <div>-</div>
-            <div><?php echo $meta['email'][0]?></div>
+            <div class="large-extension">X <?php echo $meta['extention'][0]?></div>
+            <div class="dash">-</div>
+            <div style="overflow: hidden">
+              <a href="mailto:<?php echo($meta['email'][0]) ?>"><?php echo $meta['email'][0]?></a>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +101,7 @@ $heroImageSrc = get_header_image();
     </div>
     <div class="credit-container">
       <div class="section-title">PHOTOGRAPHY CREDITS</div>
-
+      <div></div>
     </div>
 
 

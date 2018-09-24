@@ -27,6 +27,9 @@ $mobile-body-width: 400px;
 }
 .location-block {
   margin-bottom: 40px;
+  a {
+    color: $primary-light-blue;
+  }
 }
 .contact-inputs {
   margin-top: 118px !important;
@@ -64,6 +67,7 @@ $mobile-body-width: 400px;
 }
 .credit-container {
   padding: 0.5rem;
+  margin-top: 80px;
 }
 
 .manager-contacts {
@@ -87,17 +91,53 @@ $mobile-body-width: 400px;
     letter-spacing: 2px;
     margin-top: 0.25rem;
   }
+  .job-extention {
+    display: flex;
+  }
+  a {
+    color: $primary-light-blue;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
+@media screen and (min-width: $large-screen-break) {
+  .google-map {
+    margin-right: 73px;
+  }
+  .location-block {
+    flex-wrap: nowrap
+  }
+  .small-extension {
+    display: none;
+  }
+  .large-extension {
+    display: flex;
+  }
+}
 @media screen and (max-width: $large-screen-break) {
+  .google-map {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom :105px;
+    img {
+      @extend %responsive-image;
+    }
+  }
+  .location-block {
+    flex-wrap: wrap;
+  }
   .contact-inputs {
     max-width: $form-credit-mobile-size;
     margin: 118px auto 0 auto !important;
+    padding: 0 0.5rem;
   }
  
   .credit-container {
     max-width: $form-credit-mobile-size;
     margin: 0 auto;
+    margin-top: 120px;
   }
   .location-block {
     max-width: $mobile-body-width;
@@ -112,11 +152,31 @@ $mobile-body-width: 400px;
   .manager-contact {
     padding: 0 1rem;
   }
+  .dash {
+    display: none;
+  }
+  .small-extension {
+    display: flex;
+    font-family: $secondary-font;
+    font-weight: 300;
+
+  }
+  .large-extension {
+    display: none;
+  }
+  .job-extention {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: $small-screen-break) {
 
-  .contact-inputs {
-    padding: 0;
+  .manager-title {
+   
+    letter-spacing: initial;
+  }
+  
+  .manager-contact-info {
+    letter-spacing: initial;
   }
 }
 @media screen and (max-width: 33.9em) {

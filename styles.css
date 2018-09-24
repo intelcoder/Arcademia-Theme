@@ -1001,6 +1001,10 @@ template {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
+.google-map img {
+  width: 100%;
+  height: auto;
+}
 .title-box, .title-box-inner, .main-body-container .profile-box-inner .link-btn, .main-body-container .project-box-inner .link-btn-project {
   display: flex;
   align-items: center;
@@ -1147,7 +1151,7 @@ template {
 .footer-office {
   font-weight: 400;
   margin: 1rem 0rem;
-  font-size: 1.4rem;
+  font-size: 25px;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
 }
@@ -1155,14 +1159,15 @@ template {
   margin-top: 0.25rem;
 }
 .address > div {
-  font-size: 0.9rem;
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
-  line-height: 1.3rem;
+  line-height: 25px;
 }
 .reserve {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   color: #878787;
+  margin-top: 45px;
   margin-bottom: 60px;
   font-size: 0.9rem;
 }
@@ -1180,6 +1185,11 @@ template {
 .logos-container .instagram-svg svg {
   width: 47px;
   height: 47px;
+}
+@media screen and (min-width: 63.9em) {
+  .logos-container {
+    margin-top: 30px;
+  }
 }
 @media screen and (max-width: 47.9em) {
   .location {
@@ -1599,6 +1609,9 @@ template {
 .location-block {
   margin-bottom: 40px;
 }
+.location-block a {
+  color: #75b7fa;
+}
 .contact-inputs {
   margin-top: 118px !important;
 }
@@ -1631,6 +1644,7 @@ template {
 }
 .credit-container {
   padding: 0.5rem;
+  margin-top: 80px;
 }
 .manager-contacts {
   margin-top: 60px;
@@ -1653,14 +1667,47 @@ template {
   letter-spacing: 2px;
   margin-top: 0.25rem;
 }
+.manager-contact .job-extention {
+  display: flex;
+}
+.manager-contact a {
+  color: #75b7fa;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 63.9em) {
+  .google-map {
+    margin-right: 73px;
+  }
+  .location-block {
+    flex-wrap: nowrap;
+  }
+  .small-extension {
+    display: none;
+  }
+  .large-extension {
+    display: flex;
+  }
+}
 @media screen and (max-width: 63.9em) {
+  .google-map {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 105px;
+  }
+  .location-block {
+    flex-wrap: wrap;
+  }
   .contact-inputs {
     max-width: 574px;
     margin: 118px auto 0 auto !important;
+    padding: 0 0.5rem;
   }
   .credit-container {
     max-width: 574px;
     margin: 0 auto;
+    margin-top: 120px;
   }
   .location-block {
     max-width: 400px;
@@ -1674,10 +1721,27 @@ template {
   .manager-contact {
     padding: 0 1rem;
   }
+  .dash {
+    display: none;
+  }
+  .small-extension {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+  .large-extension {
+    display: none;
+  }
+  .job-extention {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 43.9em) {
-  .contact-inputs {
-    padding: 0;
+  .manager-title {
+    letter-spacing: initial;
+  }
+  .manager-contact-info {
+    letter-spacing: initial;
   }
 }
 @media screen and (max-width: 33.9em) {

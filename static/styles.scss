@@ -184,34 +184,6 @@ a {
   margin: 0.5rem 0;
 }
 
-
-// .testimonial-link-container, .white-line-container, .contact-link-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   a {
-//     display: flex;
-//     font-family: $primary-font;
-//     color: white;
-//     letter-spacing: 2px;
-//     font-size: 25px;
-//     font-weight: 300;
-//     &:hover {
-//       .arrow {
-//         transform: translateX(3px);
-//         transition: transform 0.25s;
-//       }
-//     }
-//   }
-//   .arrow {
-//     transition: transform 0.25s;
-//   }
-// }
-
-
-// Testimonial page 
-
-
 .testimonial-container {
   max-width: $max-content-width;
   margin: 1rem auto;
