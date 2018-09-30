@@ -8,14 +8,11 @@
  */
 get_header();
 $heroImageSrc = get_header_image();
+$imageAlt = "Acardemia Project Hero" 
  ?>
-
-<div class="home-hero">
- <img src="<?php echo($heroImageSrc)?>" alt="Acardemia Home Hero"/>
-</div>
+<?php include(locate_template('template-parts/hero.php')); ?>
 <div class="main-body-container ">
   <?php include(locate_template('template-parts/hero-text-box.php')); ?>
-
 </div>
 <div class="main-body-container">
   <div class="row project-blocks-container ">

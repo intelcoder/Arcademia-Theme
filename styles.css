@@ -1344,27 +1344,17 @@ template {
   transform: translate3d(0, -20px, 0) rotate(270deg);
   transition-delay: 0.075s;
 }
-.home-hero {
+.hero-container {
+  overflow: hidden;
+  max-height: 702px;
+}
+.hero-image-container {
   overflow: hidden;
 }
-.home-hero img {
+.hero-image-container img {
   width: 100%;
   height: auto;
   display: block;
-}
-.hero-image-container {
-  max-height: 702px;
-  overflow: hidden;
-}
-@media screen and (max-width: 63.9em) {
-  .home-hero-content-container {
-    display: block;
-  }
-}
-@media (max-width: 900px) and (min-width: 47.9em) {
-  .home-hero-content-container {
-    display: none;
-  }
 }
 .title-box {
   width: 635px;
@@ -1482,6 +1472,7 @@ template {
     width: 100%;
     min-width: auto;
     margin: 0 0 60px 0;
+    padding: 0 15px;
   }
   .project-block-inner .title {
     margin: 1.5rem 0 1.25rem 0;
@@ -1797,6 +1788,15 @@ template {
     padding: 0 0.5rem;
   }
 }
+@media screen and (max-width: 63.9em) {
+  .project-blocks-container .project-block:last-child {
+    margin: 0;
+  }
+  .project-blocks-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .section-title {
   font-size: 33px;
   letter-spacing: 2px;
@@ -1988,12 +1988,18 @@ a {
     align-items: center;
     flex-direction: column;
   }
+  .home-hero-content-container {
+    display: block;
+  }
 }
 @media (max-width: 900px) and (min-width: 47.9em) {
   .large-screen-header {
     display: inherit;
   }
   .small-screen-header {
+    display: none;
+  }
+  .home-hero-content-container {
     display: none;
   }
   .main-body-container .profile-image {

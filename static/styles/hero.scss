@@ -1,27 +1,13 @@
 // home page classes
-.home-hero {
+.hero-container {
   overflow: hidden;
+  max-height: 702px; 
+}
+.hero-image-container {
+  overflow:hidden;
   img {
     width: 100%;
     height: auto;
     display: block;
-  }
-}
-.hero-image-container {
-  max-height: 702px; 
-  overflow:hidden;
-
-}
-.home-hero-content-container {
-
-}
-@media screen and (max-width: 63.9em) {
-  .home-hero-content-container {
-    display: block;
-  }
-}
-@media (max-width:  900px) and (min-width: 47.9em) {
-  .home-hero-content-container {
-    display: none;
   }
 }

@@ -1,8 +1,5 @@
-
-<?php 
-  var_dump(get_header_image() );
-?>
-<div>
-  <img src="<?php get_header_image() ?>"/>
-
+<div class="hero-container">
+  <div class="hero-image-container">
+    <img src="<?php echo($heroImageSrc)?>" alt="<?php echo($heroAlt)?>"/>
+  </div>
 </div>

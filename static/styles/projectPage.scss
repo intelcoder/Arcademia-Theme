@@ -1,0 +1,11 @@
+@media screen and (max-width: 63.9em) {
+  .project-blocks-container {
+    & .project-block:last-child {
+      margin: 0;
+    }
+  }
+  .project-blocks-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}

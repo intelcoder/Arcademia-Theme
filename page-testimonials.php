@@ -8,10 +8,9 @@
  */
 get_header();
 $heroImageSrc = get_header_image();
-?>
-<div class="home-hero">
- <img src="<?php echo($heroImageSrc)?>" alt="Acardemia Home Hero"/>
-</div>
+$imageAlt = "Acardemia Testimonials Hero" 
+ ?>
+<?php include(locate_template('template-parts/hero.php')); ?>
 <div class="main-body-container ">
   <div class="title-box">
     <div class="title-box-inner">
