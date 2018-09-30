@@ -16,7 +16,7 @@ $heroImageSrc = get_header_image();
   </div>
   <div class="home-hero-content-container">
       <div class="hero-content">
-        <div class="years-upper-text">celebrating</di>
+        <div class="years-upper-text">celebrating</div>
         <div class="years">30 YEARS</div>
         <div>
           <div></div>

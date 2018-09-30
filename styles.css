@@ -1458,7 +1458,7 @@ template {
   .project-block {
     flex-direction: column;
     align-items: center;
-    margin: 0 0 90PX 0;
+    margin: 0 0 90px 0;
     max-width: 402px;
     min-width: 402px;
   }
@@ -1497,6 +1497,7 @@ template {
   height: 260px;
   background-color: #253050;
   margin-top: 76px;
+  margin-bottom: 76px;
 }
 .page-link-block-inner {
   border: 1px solid white;
@@ -1556,17 +1557,30 @@ template {
     flex-basis: 100%;
   }
 }
+@media screen and (max-width: 599px) {
+  .page-link-block {
+    height: 330px;
+  }
+}
+#profile-page .page-link-block {
+  margin-top: 0;
+}
 .profile-bg-section {
   height: 525px;
   position: relative;
+  margin-bottom: 70px;
 }
 .profile-text {
   font-size: 25px;
   line-height: 33px;
-  margin: 70px 0;
+  margin: 0 0 70px 0;
+  word-break: break-all;
 }
 .profile-page-container {
-  margin: -7rem 0 0 0;
+  margin: -2rem 30px 0 30px;
+}
+.profile-page-container-bottom {
+  margin: 0 auto 0 auto;
 }
 .bg-text {
   font-size: 33px;
@@ -1579,10 +1593,43 @@ template {
   text-align: center;
   text-transform: uppercase;
   line-height: 50px;
+  max-width: 600px;
+}
+.profile {
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  border-left: 1px solid #75b7fa;
 }
 @media screen and (max-width: 63.9em) {
   .profile-page-container {
     padding: 0 0.5rem;
+  }
+  .profile {
+    margin-bottom: 70px;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile-page-container {
+    max-width: 574px;
+    margin: -2rem auto 0 auto;
+    padding: 0 15px;
+  }
+  .profile-page-container-bottom {
+    margin: 0 auto 0 auto;
+    max-width: 574px;
+    padding: 0 15px;
+  }
+  .profile-bg-section {
+    height: 363px;
+  }
+  .profile-text {
+    margin: 0 0 84px 0;
+  }
+  .bg-text {
+    max-width: 450px;
+    width: 80%;
+    line-height: 40px;
   }
 }
 .contact-page {
@@ -1660,12 +1707,13 @@ template {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
+  margin: 0;
 }
 .manager-contact .manager-contact-info {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0 0;
 }
 .manager-contact .job-extention {
   display: flex;
@@ -1748,9 +1796,6 @@ template {
   .credit-container, .contact-inputs {
     padding: 0 0.5rem;
   }
-}
-.row {
-  margin: 0;
 }
 .section-title {
   font-size: 33px;
@@ -1930,6 +1975,9 @@ a {
   }
 }
 @media screen and (max-width: 63.9em) {
+  .main-body-container {
+    padding: 0 15px;
+  }
   .testimonial-container {
     padding: 0 0.5rem;
   }
@@ -1992,10 +2040,19 @@ a {
   .review-container {
     padding: 0 2.5rem;
   }
+  .testimonial-container {
+    padding: 0;
+    max-width: 574px;
+  }
+  .home-hero-content-container {
+    max-width: 630px;
+    margin: 0 auto;
+  }
   .hero-content {
-    margin: 3rem 0;
-    display: flex;
+    margin: 3rem 50px;
+    display: inline-block;
     justify-content: center;
+    flex-direction: column;
   }
   .years-upper-text {
     font-size: 44px;
@@ -2011,5 +2068,43 @@ a {
   }
   .year-period {
     font-size: 33px;
+  }
+  .featured-in {
+    text-align: center;
+  }
+  .featured-in-container .white-line {
+    display: none;
+  }
+  .profile-project-col .profile-box-inner {
+    padding: 60px;
+    height: auto;
+    font-size: 25px;
+    margin: 70px 50px;
+  }
+  .profile-project-col .profile-box-inner > div {
+    padding: 0 70px;
+    text-align: center;
+  }
+  .profile-project-col .project-box-inner {
+    padding: 60px;
+    height: auto;
+    font-size: 25px;
+    margin: 70px 50px;
+  }
+  .profile-project-col .project-box-inner > div {
+    padding: 0 70px;
+    text-align: center;
+  }
+  .profile-project-col .link-btn-project {
+    width: 293px;
+    height: 50px;
+  }
+  .profile-project-col .link-btn-project a {
+    font-size: 25px;
+  }
+  .review-container {
+    margin: 4rem auto 0 auto;
+    max-width: 500px;
+    padding: 0 15px;
   }
 }

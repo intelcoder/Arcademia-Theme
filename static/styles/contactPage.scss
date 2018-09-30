@@ -83,13 +83,15 @@ $mobile-body-width: 400px;
     font-family: $primary-font;
     font-weight: 600;
     letter-spacing: 2px;
+    margin: 0;
   }
   
   .manager-contact-info {
     font-family: $secondary-font;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-top: 0.25rem;
+
+    margin: 0.25rem 0 0 0;
   }
   .job-extention {
     display: flex;
