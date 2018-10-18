@@ -267,7 +267,7 @@ a {
 
 }
 
-@media (max-width:  900px) and (min-width: 47.9em) {
+@media (max-width:  900px) and (min-width: $small-screen-break) {
   .large-screen-header {
     display: inherit;
   }
@@ -301,7 +301,12 @@ a {
   
 }
 
-@media screen and (max-width: 47.9em) {
+@media screen and (min-width: $small-screen-break) {
+  .home-hero-content-container {
+    display: none;
+  }
+}
+@media screen and (max-width: $small-screen-break) {
   
   .large-screen-header {
     display: none;
@@ -340,10 +345,11 @@ a {
   .home-hero-content-container {
     max-width: 630px;
     margin: 0 auto;
+    display: flex;
   }
   .hero-content {
     
-    margin: 3rem 50px;
+    margin: 3rem auto;
     display: inline-block;
     justify-content: center;
     flex-direction: column;
@@ -356,13 +362,15 @@ a {
 
   }
   .years {
-    font-size: 77px;
+    font-size: 88px;
     font-family: $primary-font;
     font-weight: bold;
     letter-spacing: 10px;
+    line-height: 110px; 
   }
   .year-period {
     font-size: 33px;
+    margin-top: 20px;
   }
 
   .featured-in {

@@ -38,10 +38,12 @@
 }
 
 
-@media screen and (max-width: 47.9em) {
+@media screen and (max-width: 768px) {
   .title-box {
     width: 400px;
     height: 165px;
+    transform: translateX(-50%) translateY(-25%);
+    padding-bottom: 4rem;
   }
 
   .title-box-title {

@@ -5,6 +5,14 @@
  * Date: 2018-08-08
  * Time: 오후 9:05
  */
+$args = array('post_type' => 'locations');
+$query = new WP_Query($args);
+$location = $query -> posts[0];
+function inline_svg_func($name) {
+  $file = get_template_directory();
+  $file .= "/static/svgs/" . $name . ".svg";
+  include($file);
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -40,7 +48,12 @@
       <div class="mobile-menu">
         <?php wp_nav_menu();?>
       </div>
+    
       <div class="mobile-menu-footer">
+        <div class="logos-container">
+          <div class="facebook-svg"><?php inline_svg_func('facebook') ?></div>
+          <div class="instagram-svg"><?php inline_svg_func('instagram') ?></div>
+        </div>
         <?php include(locate_template('template-parts/address.php')); ?>
       </div>
          

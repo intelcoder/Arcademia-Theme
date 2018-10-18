@@ -21,7 +21,7 @@ $imageAlt = "Acardemia Profile Hero"
         </div>
       <div class=" col-md-6 profile-text">
         <div class="profile">
-          <div>ANDREA ZUCCARINI PRINCIPAL</div>
+          <div><strong>ANDREA ZUCCARINI</strong> PRINCIPAL</div>
           <div>Ryerson B.Tech Arc Sci.</div>
         </div>
         <?php echo get_theme_mod('top_left_text') ?>
