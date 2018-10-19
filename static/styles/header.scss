@@ -5,13 +5,15 @@ $mobile-header-size: 86px;
   width: 100%;
   height: $desktop-header-size;
   background:$primary-blue;
+  flex-wrap: nowrap;
+  position: relative;
   .logo-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
     .sub {
-      font-size: 0.8rem;
+      font-size: 12px;
       text-align: center;
     }
   }
@@ -20,9 +22,9 @@ $mobile-header-size: 86px;
 
 .menu {
   display: flex;
+
 }
 .menu-item {
-  padding: 0.5rem;
   a {
     font-size: 23px;
     text-transform: uppercase;
@@ -30,17 +32,26 @@ $mobile-header-size: 86px;
     color: white;
   }
 }
-
+.logo-with-line {
+  width: 50%;
+  align-items: center;
+  flex-wrap: nowrap;
+  .white-line {
+    width: calc(100% - 135px);
+    max-width: 354px;
+    margin: 0 40px;
+  }
+}
 .header-inner-container {
-  padding: 1rem;
-  max-width: $max-width-size;
-  margin: auto;
+  padding: 0 60px;
   display: flex;
   height: 100%;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  margin: 0;
 }
 .hamburger-container {
-  position: absolute;
+  // position: absolute;
   right: 1rem;
 }
 #mobile-menu-container {
@@ -101,6 +112,7 @@ $mobile-header-size: 86px;
   #mobile-menu-container {
     display: none !important;
   }
+  
 }
 
 @media screen and(max-width: $large-screen-break) {
@@ -113,6 +125,23 @@ $mobile-header-size: 86px;
   }
   
 }
+@media screen and(min-width: 768px) {
+  .menu {
+    .menu-item:nth-child(1) {
+      margin: 0;
+    }
+  }
+  .menu-item {
+    padding: 0;
+    margin-left: 30px;
+  }
+  .logo-container {
+    margin-left: 0.5rem;
+    &:nth-child(1) {
+      font-weight: 500;
+    }
+  }
+}
 @media screen and(max-width: 768px) {
   .large-screen-menu {
     display: none;
@@ -120,12 +149,28 @@ $mobile-header-size: 86px;
   .small-screen-menu {
     display: flex;
   }
+
   .header-inner-container {
     justify-content: center;
     align-items: center;
+    .white-line {
+      display: none;
+    }
+    .hamburger {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }  
   .menu {
     flex-direction: column;
+  }
+  .menu-item {
+    padding: 0.5rem;
+  }
+  .logo-with-line {
+    justify-content: center;
   }
   .logo-container {
     margin: 0.5rem 0;

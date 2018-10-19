@@ -28,10 +28,14 @@ function inline_svg_func($name) {
 <body <?php body_class(); ?>>
 <header class="header">
   <div class="row header-inner-container between-sm between-md middle-sm middle-md">
-    <a href='/' class="logo-container">
-      <div>ARCADEMIA</div>
-      <div class="sub">GROUP INC.</div>
-    </a>
+    <div class="row logo-with-line">
+      <a href='/' class="logo-container">
+        <div>ARCADEMIA</div>
+        <div class="sub">GROUP INC.</div>
+      </a>
+      <div class="white-line"></div>
+    </div>
+    
     <div class="hamburger-container">
       <div class="large-screen-menu">
         <?php wp_nav_menu();?>
@@ -56,8 +60,6 @@ function inline_svg_func($name) {
         </div>
         <?php include(locate_template('template-parts/address.php')); ?>
       </div>
-         
-  
     </div>
   </div>
 </header>
