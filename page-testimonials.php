@@ -23,48 +23,51 @@ $imageAlt = "Acardemia Testimonials Hero"
 
 </div>
 <div class="main-body-container ">
-  <div class="row testimonial-container">
-    <?php
-          $args = array('post_type' => 'testimonials');
-          $query = new WP_Query($args);
-          while($query -> have_posts()) : $query -> the_post();
-          $meta = get_post_meta( get_the_ID() );
-        ?>
+  <div class="row testimonial-page">
+    <div class="testimonial-container">
+      <?php
+        $args = array('post_type' => 'testimonials');
+        $query = new WP_Query($args);
+        while($query -> have_posts()) : $query -> the_post();
+        $meta = get_post_meta( get_the_ID() );
+      ?>
         <div class="col-sm-12 col-md-12 no-padding testimonial">
           <div class="content"><?php echo($meta['testimonial'][0]); ?></div>
           <div class="testimonial-writer">- <?php echo($meta['testimonial_writer'][0]); ?></div>
         </div>
       <?php endwhile; ?>
     </div>
-    <div class="row no-margin featured-in-container testimonial-container">
-      <div class="featured-in">Also Featured In</div>
-      <div class="col-xs-0 col-sm-4 col-md-4 white-line-container no-padding">
+    </div>
+   
+    <div class="testimonial-page">
+      <div class="row featured-in-container  ">
+        <div class="featured-in">Also Featured In</div>
+        <div class="white-line-container no-padding">
             <div class="white-line"></div>
-      </div>
-    </div>
-    <div class="features-container testimonial-container">
-      <div class="row no-margin">
-        <div class="col-md-3">
-          <div>
-            CANADIAN
-          </div>
-          <div>
-            INTERIORS
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div>
-            STYLE AT
-          </div>
-          <div>
-            HOME
-          </div>
-
         </div>
       </div>
+      <div class="features-container">
+        <div class="row no-margin featured-link">
+          <div class="col-md-3 ">
+            <div>
+              CANADIAN
+            </div>
+            <div>
+              INTERIORS
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              STYLE AT
+            </div>
+            <div>
+              HOME
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-
   </div>
 
  <div class="main-body-container ">

@@ -993,7 +993,7 @@ template {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
-.bg-text, .contact-heading, .section-title {
+.bg-text, .contact-heading, .featured-link div, .section-title {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
 }
@@ -1229,7 +1229,7 @@ template {
 }
 .footer .menu-header-container a {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 17px;
   color: black;
 }
 .footer-office {
@@ -1243,7 +1243,7 @@ template {
   margin-top: 0.25rem;
 }
 .address > div {
-  font-size: 16px;
+  font-size: 17px;
   font-family: 'Lato', sans-serif;
   line-height: 25px;
 }
@@ -1474,7 +1474,7 @@ template {
   text-align: center;
   margin: 0.25rem 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .title-box {
     width: 400px;
     height: 165px;
@@ -1884,6 +1884,105 @@ template {
     flex-direction: column;
   }
 }
+.testimonial-page {
+  max-width: calc(718px + 30px);
+  padding: 0 15px;
+  margin: 1rem auto;
+}
+.testimonial-container:last-child {
+  margin-bottom: 90px;
+}
+.testimonial {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.testimonial .content {
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.testimonial-writer {
+  text-align: right;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.featured-in-container {
+  max-width: calc(718px + 30px);
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 70px;
+}
+.featured-in-container .white-line-container {
+  width: calc(100% - 486px);
+}
+.featured-in-container .white-line {
+  width: 100%;
+  background: #ecbc2b;
+}
+.featured-in {
+  color: #ecbc2b;
+  letter-spacing: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 41px;
+}
+.featured-link {
+  max-width: calc(718px + 30px);
+  padding: 0 15px;
+}
+.featured-link > div {
+  margin-right: 40px;
+  line-height: 35px;
+}
+.featured-link > div:last-child {
+  margin-right: 0;
+}
+.featured-link div {
+  font-size: 25px;
+  color: #ccc;
+}
+@media screen and (max-width: 63.9em) {
+  .testimonial-page {
+    padding: 0 0.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .testimonial-page {
+    padding: 0 20px;
+    max-width: calc(574px + 40px);
+  }
+  .testimonial-page .content {
+    font-size: 33px;
+    line-height: 41px;
+  }
+  .testimonial-page .testimonial-writer {
+    font-size: 33px;
+    line-height: 41px;
+    margin-top: 48px;
+  }
+  .featured-in-container .white-line-container {
+    display: none;
+  }
+  .featured-in {
+    text-align: center;
+  }
+  .featured-link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .featured-link > div {
+    margin: 0 0 36px 0;
+  }
+  .featured-link div {
+    text-align: center;
+  }
+}
 .section-title {
   font-size: 33px;
   letter-spacing: 2px;
@@ -2017,37 +2116,6 @@ a {
 .review-block {
   margin: 0.5rem 0;
 }
-.testimonial-container {
-  max-width: 718px;
-  padding: 15px;
-  margin: 1rem auto;
-}
-.testimonial {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-.testimonial .content {
-  font-size: 20px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-}
-.testimonial-writer {
-  text-align: right;
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.featured-in-container .white-line {
-  background: #ecbc2b;
-}
-.featured-in {
-  color: #ecbc2b;
-  letter-spacing: 12px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 2.4rem;
-}
 @media screen and (min-width: 1440px) {
   .hero-image-container {
     max-height: 702px;
@@ -2065,9 +2133,6 @@ a {
 @media screen and (max-width: 63.9em) {
   .main-body-container {
     padding: 0 15px;
-  }
-  .testimonial-container {
-    padding: 0 0.5rem;
   }
   .project-blocks-container .project-block:last-child {
     margin: 0;
@@ -2139,10 +2204,6 @@ a {
   .review-container {
     padding: 0 2.5rem;
   }
-  .testimonial-container {
-    padding: 0;
-    max-width: 574px;
-  }
   .home-hero-content-container {
     max-width: 630px;
     margin: 0 auto;
@@ -2170,6 +2231,11 @@ a {
   .year-period {
     font-size: 33px;
     margin-top: 20px;
+  }
+  .featured-in {
+    font-size: 41px;
+    text-align: center;
+    width: 100%;
   }
   .featured-in-container .white-line {
     display: none;

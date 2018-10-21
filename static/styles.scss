@@ -1,21 +1,20 @@
+@import "normalize.scss";
+@import "flexboxGrid.scss";
+@import "./styles/variables.scss";
+@import "./styles/extendVariables.scss";
+@import "./styles/header.scss";
+@import "./styles/footer.scss";
+@import "./styles/hamburger.scss";
+@import "./styles/hero.scss";
 
-@import 'normalize.scss';
-@import 'flexboxGrid.scss';
-@import './styles/variables.scss';
-@import './styles/extendVariables.scss';
-@import './styles/header.scss';
-@import './styles/footer.scss';
-@import './styles/hamburger.scss';
-@import './styles/hero.scss';
-
-@import './styles/heroTextBox.scss';
-@import './styles/projectBlock.scss';
-@import './styles/pageBottomLinkBox.scss';
+@import "./styles/heroTextBox.scss";
+@import "./styles/projectBlock.scss";
+@import "./styles/pageBottomLinkBox.scss";
 // pages
-@import './styles/profilePage.scss';
-@import './styles/contactPage.scss';
-@import './styles/projectPage.scss';
-
+@import "./styles/profilePage.scss";
+@import "./styles/contactPage.scss";
+@import "./styles/projectPage.scss";
+@import "./styles/testimonialPage.scss";
 
 .section-title {
   @extend %pirmary-font-medium;
@@ -27,7 +26,7 @@
 div {
   font-family: $secondary-font;
 }
-// set default style 
+// set default style
 ul {
   list-style-type: none;
   margin: 0;
@@ -79,7 +78,6 @@ a {
   font-size: 1.5rem;
 }
 
-
 .white-line-separator {
   height: 1px;
   background: white;
@@ -125,10 +123,10 @@ a {
       height: 100%;
     }
   }
-  .link-btn, .link-btn-project {
+  .link-btn,
+  .link-btn-project {
     cursor: pointer;
     &:hover {
-      
     }
   }
   .profile-box-inner {
@@ -141,11 +139,10 @@ a {
       margin-top: 4rem;
       letter-spacing: 2px;
     }
-   
   }
-  .profile-box, .project-box {
+  .profile-box,
+  .project-box {
     height: 100%;
-  
   }
   .project-box-inner {
     @extend %profile-project-inner;
@@ -176,62 +173,23 @@ a {
 .review-writer {
   font-weight: bold;
   color: $primary-yellow;
-  float:right;
+  float: right;
   margin-top: 2rem;
 }
 .review-block {
   margin: 0.5rem 0;
 }
 
-.testimonial-container {
-  max-width: $max-content-width;
-  padding: 15px;
-  margin: 1rem auto;
-}
-.testimonial {
-  width: 100%;
-  margin-bottom: 1rem;
-  .content {
-    font-size: 20px;
-    font-family: $secondary-font;
-    font-weight: 300;
-  }
-}
-.testimonial-writer {
-  text-align: right;
-  margin-top:  20px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.featured-in-container {
-  
-  .white-line {
-    background: $primary-yellow;
-  }
-}
-.featured-in {
-  color: $primary-yellow;
-  letter-spacing: 12px;
-  font-family: $primary-font;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 2.4rem;
-}
-
-
-
 
 .large-screen-header {
-
 }
 .small-screen-header {
-
 }
 
 @media screen and(min-width: 1440px) {
   .hero-image-container {
-    max-height: 702px; 
-  
+    max-height: 702px;
+
     img {
       transform: translateY(-7vw);
     }
@@ -239,7 +197,7 @@ a {
 }
 @media screen and (max-width: 1035px) and (min-width: 900px) {
   .profile-image {
-    min-height:380px;
+    min-height: 380px;
     height: 100% !important;
   }
 }
@@ -247,10 +205,6 @@ a {
 @media screen and (max-width: 63.9em) {
   .main-body-container {
     padding: 0 15px;
-  }
-  .testimonial-container {
-    padding: 0 0.5rem;
-  
   }
   .project-blocks-container {
     & .project-block:last-child {
@@ -264,11 +218,9 @@ a {
   .home-hero-content-container {
     display: block;
   }
-  
-
 }
 
-@media (max-width:  900px) and (min-width: $small-screen-break) {
+@media (max-width: 900px) and (min-width: $small-screen-break) {
   .large-screen-header {
     display: inherit;
   }
@@ -280,13 +232,13 @@ a {
   }
   .main-body-container {
     .profile-image {
-      height:340px !important;
-    
+      height: 340px !important;
     }
     .profile-project-col {
       height: 340px !important;
     }
-    .link-btn, .link-btn-project {
+    .link-btn,
+    .link-btn-project {
       height: 48px;
       width: 240px;
       margin-top: 2rem !important;
@@ -294,12 +246,11 @@ a {
         font-size: 1.3rem;
       }
     }
-    .profile-box-inner, .project-box-inner {
+    .profile-box-inner,
+    .project-box-inner {
       font-size: 1.3rem;
     }
   }
-
-  
 }
 
 @media screen and (min-width: $small-screen-break) {
@@ -308,7 +259,6 @@ a {
   }
 }
 @media screen and (max-width: $small-screen-break) {
-  
   .large-screen-header {
     display: none;
   }
@@ -323,14 +273,15 @@ a {
         height: auto;
       }
     }
-    .link-btn, .link-btn-project {
-   
+    .link-btn,
+    .link-btn-project {
       width: 200px;
       a {
         font-size: 1.2rem;
       }
     }
-    .project-box-inner, .profile-box-inner {
+    .project-box-inner,
+    .profile-box-inner {
       font-size: 1.2rem;
     }
   }
@@ -338,10 +289,7 @@ a {
     padding: 0 2.5rem;
   }
 
-  .testimonial-container {
-    padding: 0;
-    max-width: 574px;
-  }
+  
 
   .home-hero-content-container {
     max-width: 630px;
@@ -349,7 +297,6 @@ a {
     display: flex;
   }
   .hero-content {
-    
     margin: 3rem auto;
     display: inline-block;
     justify-content: center;
@@ -360,14 +307,13 @@ a {
     text-transform: uppercase;
     font-family: $primary-font;
     letter-spacing: 8px;
-
   }
   .years {
     font-size: 88px;
     font-family: $primary-font;
     font-weight: bold;
     letter-spacing: 10px;
-    line-height: 110px; 
+    line-height: 110px;
   }
   .year-period {
     font-size: 33px;
@@ -375,7 +321,9 @@ a {
   }
 
   .featured-in {
- 
+    font-size: 41px;
+    text-align: center;
+    width: 100%;
   }
 
   .featured-in-container {
@@ -419,5 +367,4 @@ a {
     max-width: 500px;
     padding: 0 15px;
   }
-  
 }
