@@ -7,8 +7,8 @@
  * @since  Arcademia Theme 1.0
  */
 
-get_header();
-$heroImageSrc = get_header_image();
+  get_header();
+  $heroImageSrc = get_header_image();
 ?>
 <div class="home-hero">
   <div class="hero-image-container">

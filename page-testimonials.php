@@ -6,10 +6,12 @@
  * @subpackage  Arcademia Theme
  * @since  Arcademia Theme 1.0
  */
-get_header();
-$heroImageSrc = get_header_image();
-$imageAlt = "Acardemia Testimonials Hero" 
- ?>
+  get_header();
+  $heroImageSrc = get_theme_mod('testimonial_hero_image');
+  $imageAlt = "Acardemia Testimonials Hero";
+  $subTitle = get_theme_mod('testimonial_hero_box_subtitle');
+  $title = get_theme_mod('testimonial_hero_box_title');
+?>
 <?php include(locate_template('template-parts/hero.php')); ?>
 <div class="main-body-container ">
   <div class="title-box">

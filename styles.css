@@ -1490,7 +1490,7 @@ template {
 }
 @media screen and (max-width: 33.9em) {
   .title-box {
-    width: 250px;
+    width: 320px;
     height: 100px;
   }
   .title-box-title {

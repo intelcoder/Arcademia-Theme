@@ -7,9 +7,11 @@
  * @since  Arcademia Theme 1.0
  */
 
-get_header();
-$heroImageSrc = get_header_image();
-$imageAlt = "Acardemia Profile Hero" 
+  get_header();
+  $heroImageSrc = get_theme_mod( 'profile_hero_image' );
+  $imageAlt = "Acardemia Profile Hero"; 
+  $subTitle = get_theme_mod('profile_hero_box_subtitle');
+  $title = get_theme_mod('profile_hero_box_title');
 ?>
 <div id="profile-page">
   <?php include(locate_template('template-parts/hero.php')); ?>
