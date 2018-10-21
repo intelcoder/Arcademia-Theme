@@ -112,6 +112,7 @@ function arcademia_customize_register( $wp_customize ) {
     )));
 
     
+    
     $wp_customize -> add_setting('home_project_button_text', array(
         'transport'      => 'refresh',
         'height'         => 325,
@@ -123,18 +124,158 @@ function arcademia_customize_register( $wp_customize ) {
         'section' => 'homepage'
     ));
 
-    // Testimonial Page
+     // Project Page Theme Customize
+     $wp_customize -> add_section('projectPage', array(
+        'title'      => __( 'Project page', 'arcademia' ),
+        'priority'   => 30,
+    ));
+    // Project Page Hero Image 
+    $wp_customize -> add_setting('project_hero_image_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'project_hero_image_setting', array(
+        'label'      => __( 'Project Page Hero Image', 'arcademia' ),
+        'section'    => 'projectPage',
+        'settings'   => 'project_hero_image_setting',
+    )));
+
+    // Setting for the rect box which overlaps with hero
+    $wp_customize -> add_setting('project_hero_box_subtitle_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('project_hero_box_subtitle', array(
+        'label' => __('Hero Box Subtitle', 'arcademia'),
+        'section' => 'projectPage',
+        'settings'   => 'project_hero_box_subtitle_setting',
+    ));
+    $wp_customize -> add_setting('project_hero_box_title_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+    $wp_customize -> add_control('project_hero_box_title', array(
+        'label' => __('Hero Box Title', 'arcademia'),
+        'section' => 'projectPage',
+        'settings'   => 'project_hero_box_title_setting',
+    ));
+
+
+    // Testimonial Page Theme Customize
+    $wp_customize -> add_section('testimonialPage', array(
+        'title'      => __( 'Testimonial page', 'arcademia' ),
+        'priority'   => 30,
+    ));
+
+    $wp_customize -> add_setting('testimonial_hero_image_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'testimonial_hero_image_setting', array(
+        'label'      => __( 'Testimonial Hero Image', 'arcademia' ),
+        'section'    => 'testimonialPage',
+        'settings'   => 'testimonial_hero_image_setting',
+    )));
+
+    $wp_customize -> add_setting('tesitmonial_hero_box_subtitle_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('testimonial_hero_box_subtitle', array(
+        'label' => __('Hero Box Subtitle', 'arcademia'),
+        'section' => 'testimonialPage',
+        'settings'   => 'tesitmonial_hero_box_subtitle_setting',
+    ));
+    $wp_customize -> add_setting('testimonial_hero_box_title_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+    $wp_customize -> add_control('testimonial_hero_box_title', array(
+        'label' => __('Hero Box Title', 'arcademia'),
+        'section' => 'testimonialPage',
+        'settings'   => 'testimonial_hero_box_title_setting',
+    ));
+
+    // Contact Page Theme Customize
     $wp_customize -> add_section('contactPage', array(
         'title'      => __( 'Contact page', 'arcademia' ),
         'priority'   => 30,
     ));
+    $wp_customize -> add_setting('contact_hero_image_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
 
-    // Profile Page
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'contact_hero_image_setting', array(
+        'label'      => __( 'Contact Page Hero Image', 'arcademia' ),
+        'section'    => 'contactPage',
+        'settings'   => 'contact_hero_image_setting',
+    )));
+
+      // Setting for the rect box which overlaps with hero
+      $wp_customize -> add_setting('contact_hero_box_subtitle_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('contact_hero_box_subtitle', array(
+        'label' => __('Hero Box Subtitle', 'arcademia'),
+        'section' => 'contactPage',
+        'settings'   => 'contact_hero_box_subtitle_setting',
+    ));
+    $wp_customize -> add_setting('contact_hero_box_title_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+    $wp_customize -> add_control('contact_hero_box_title', array(
+        'label' => __('Hero Box Title', 'arcademia'),
+        'section' => 'contactPage',
+        'settings'   => 'contact_hero_box_title_setting',
+    ));
+
+
+    // Profile Page  Theme Customize
     $wp_customize -> add_section('profilePage', array(
         'title'      => __( 'Profile page', 'arcademia' ),
         'priority'   => 30,
     ));
+    $wp_customize -> add_setting('profile_hero_image_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
 
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'profile_hero_image_setting', array(
+        'label'      => __( 'Profile Hero Image', 'arcademia' ),
+        'section'    => 'profilePage',
+        'settings'   => 'profile_hero_image_setting',
+    )));
+    // Setting for the rect box which overlaps with hero
+    $wp_customize -> add_setting('profile_hero_box_subtitle_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('profile_hero_box_subtitle', array(
+        'label' => __('Hero Box Subtitle', 'arcademia'),
+        'section' => 'profilePage',
+        'settings'   => 'profile_hero_box_subtitle_setting',
+    ));
+    $wp_customize -> add_setting('profile_hero_box_title_setting', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+    $wp_customize -> add_control('hero_box_title', array(
+        'label' => __('Hero Box Title', 'arcademia'),
+        'section' => 'profilePage',
+        'settings'   => 'profile_hero_box_title_setting',
+    ));
+
+
+    // Profile Page content setting
     $wp_customize -> add_setting('top_right_text', array(
         'transport'      => 'refresh',
         'height'         => 325,
@@ -224,7 +365,7 @@ function reviews_post_type() {
     register_post_type( 'Reviews',
         array(
         'labels' => array(
-            'name'               => __('Reviews', 'arcademia'),
+            'name'               => __('Home Page - Reviews', 'arcademia'),
             'singular_name'      => __('Review', 'arcademia'),
             'add_new_item'       => __('Add New Review', 'arcademia'),
             'edit_item'          => __('Edit Review', 'arcademia'),
@@ -250,7 +391,7 @@ function testimonials_post_type() {
     register_post_type( 'Testimonials',
         array(
         'labels' => array(
-            'name'               => __('Testimonials', 'arcademia'),
+            'name'               => __('Testimonal Page - Testimonials', 'arcademia'),
             'singular_name'      => __('Testimonial', 'arcademia'),
             'add_new_item'       => __('Add New Testimonial', 'arcademia'),
             'edit_item'          => __('Edit Testimonial', 'arcademia'),
@@ -276,7 +417,7 @@ function projects_post_type() {
     register_post_type( 'Projects',
         array(
         'labels' => array(
-            'name'               => __('Projects', 'arcademia'),
+            'name'               => __('Project Page - Projects', 'arcademia'),
             'singular_name'      => __('Project', 'arcademia'),
             'add_new_item'       => __('Add New Project', 'arcademia'),
             'edit_item'          => __('Edit Project', 'arcademia'),
@@ -303,7 +444,7 @@ function locations_post_type() {
     register_post_type( 'Locations',
         array(
         'labels' => array(
-            'name'               => __('Locations', 'arcademia'),
+            'name'               => __('Contact Page - Locations', 'arcademia'),
             'singular_name'      => __('Location', 'arcademia'),
             'add_new_item'       => __('Add New Location', 'arcademia'),
             'edit_item'          => __('Edit Location', 'arcademia'),
@@ -330,7 +471,7 @@ function contact_manager_post_type() {
     register_post_type( 'manager_contact',
         array(
         'labels' => array(
-            'name'               => __('Manager Contacts', 'arcademia'),
+            'name'               => __('Contact Page - Manager Contacts', 'arcademia'),
             'singular_name'      => __('Manager Contact', 'arcademia'),
             'add_new_item'       => __('Add Manager Contact', 'arcademia'),
             'edit_item'          => __('Edit Manager Contact', 'arcademia'),

@@ -43,7 +43,7 @@ $imageAlt = "Acardemia Contact Hero"
             <span class="contact-heading">F&nbsp</span>
             <span><?php echo($meta['fax'][0]) ?></span>
           </div>
-          <div>
+          <div class="email">
             <span class="contact-heading">E&nbsp</span>
             <span><a href="mailto:<?php echo($meta['email'][0]) ?>"><?php echo($meta['email'][0]) ?></a></span>
           </div>

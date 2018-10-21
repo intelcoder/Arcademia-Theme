@@ -6,14 +6,20 @@ $mobile-body-width: 400px;
   margin: 0 auto;
   max-width: $max-content-width;
   margin-top: -2rem;
+  .email {
+    display: flex;
+    
+  }
 }
 .address-container {
   margin-bottom: 40px;
   div {
+    white-space: nowrap;
     font-family: $secondary-font;
     font-weight: 300;
     font-size: 25px;
   }
+  
 }
 .contact-heading {
   @extend %pirmary-font-medium;
@@ -27,6 +33,7 @@ $mobile-body-width: 400px;
 }
 .location-block {
   margin-bottom: 40px;
+
   a {
     color: $primary-light-blue;
   }
@@ -76,6 +83,7 @@ $mobile-body-width: 400px;
 .manager-contact {
   font-size: 25px;
   margin-bottom: 40px;
+  line-height: 33px;
   .dash {
     padding: 0 0.5rem;
   }
@@ -104,6 +112,7 @@ $mobile-body-width: 400px;
   }
 }
 
+
 @media screen and (min-width: $large-screen-break) {
   .google-map {
     margin-right: 73px;
@@ -129,6 +138,11 @@ $mobile-body-width: 400px;
   }
   .location-block {
     flex-wrap: wrap;
+  }
+  .address-container {
+    div {
+      white-space: initial;
+    }
   }
   .contact-inputs {
     max-width: $form-credit-mobile-size;

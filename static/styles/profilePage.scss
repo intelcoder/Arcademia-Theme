@@ -18,7 +18,7 @@
 }
 
 .profile-page-container {
-  margin: -2rem auto 0 auto;
+  margin: -20px auto 0 auto;
 }
 .profile-page-container-bottom {
   margin: 0 auto 0 auto;
@@ -41,6 +41,9 @@
   margin-bottom: 20px;
   padding: 10px 25px;
   border-left: 1px solid $primary-light-blue;
+  strong {
+    @extend %pirmary-font-medium;
+  }
 }
 
 @media screen and (max-width: 63.9em) {
@@ -48,7 +51,7 @@
     padding: 0 0.5rem;
   }
   .profile {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     padding: 0 25px;
   }
 }
@@ -66,10 +69,11 @@
   }
   .profile-bg-section {
     height: 363px;
+    margin-bottom: 90px;
   }
   .profile-text {
-    margin: 0 0 84px 0;
-    word-break: break-all;
+    margin: 0 0 90px 0;
+
     font-size: 33px;
     line-height: 41px;
   }
@@ -77,5 +81,6 @@
     max-width: 450px;
     width: 80%;
     line-height: 40px;
+    letter-spacing: 2px;
   }
 }
