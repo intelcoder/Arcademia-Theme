@@ -4,6 +4,7 @@
   margin: -2rem auto 0 auto;
 }
 .testimonial-container {
+  max-width: 718px;
   &:last-child {
     margin-bottom: 60px;
   }
@@ -12,29 +13,31 @@
 .testimonial {
   width: 100%;
   margin-bottom: 50px;
+  margin-top: -5px;
   .content {
-    letter-spacing: 2px;
     font-size: 20px;
     font-family: $secondary-font;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 24px;
   }
 }
 .testimonial-writer {
+  @extend %pirmary-font-medium;
   text-align: right;
-  margin-top: 40px;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
 }
 .featured-in-container {
-  max-width: calc(718px + 30px);
-  padding: 0 15px;
+  max-width: calc(718px);
+  padding: 0;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 70px;
   .white-line-container {
-    width: calc(100% - 486px);
+    width: calc(100% - 200px);
+    margin-left: 25px;
   }
   .white-line {
     width: 100%;
@@ -43,18 +46,18 @@
 }
 .featured-in {
   color: $primary-yellow;
-  letter-spacing: 12px;
+  letter-spacing: 4px;
   font-family: $primary-font;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 41px;
+  font-size: 25px;
 }
 .featured-link {
   max-width: calc(718px + 30px);
   padding: 0 15px;
   > div {
     margin-right: 40px;
-    line-height: 35px;
+    line-height: 33px;
     &:last-child {
       margin-right: 0;
     }
@@ -62,7 +65,7 @@
   div {
     font-size: 25px;
     color: #cccccc;
-    @extend %pirmary-font-medium;
+    @extend %pirmary-font-light;
   }
 }
 
@@ -78,20 +81,25 @@
     padding: 0 20px;
     max-width: calc( 574px + 40px);
     .content {
-      font-size: 33px;
-      line-height: 41px;
+      font-size: 16px;
+      line-height: 20px;
     }
     .testimonial-writer {
-      font-size: 33px;
-      line-height: 41px;
-      margin-top: 48px;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 20px;
     }
+  }
+  .featured-in-container {
+    margin-bottom: 30px;
   }
   .featured-in-container .white-line-container {
     display: none;
   }
   .featured-in {
+    font-size: 20px;
     text-align: center;
+    width: 100%;
   }
   .featured-link {
     flex-direction: column;
@@ -101,7 +109,12 @@
       margin: 0 0 36px 0;
     }
     div {
+      font-size: 20px;
       text-align: center;
+      line-height: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

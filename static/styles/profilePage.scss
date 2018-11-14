@@ -8,13 +8,13 @@
 .profile-bg-section {
   height: 525px;
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 .profile-text {
   @extend %secondary-font-light;
-  font-size: $large-content-font-size;
-  line-height: 33px;
-  margin: 0 0 70px 0;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 0 55px 0;
 }
 
 .profile-page-container {
@@ -22,10 +22,15 @@
 }
 .profile-page-container-bottom {
   margin: 0 auto 0 auto;
+  .profile-text {
+    margin: 0;
+  }
 }
 .bg-text {
   @extend %pirmary-font-medium;
-  font-size: 33px;
+  max-width: 534px;
+  font-size: 30px;
+  line-height: 50px;
   position: absolute;
   color: white;
   top: 50%;
@@ -34,15 +39,19 @@
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
   text-transform: uppercase;
-  line-height: 50px;
-  max-width: 600px;
 }
 .profile {
   margin-bottom: 20px;
   padding: 10px 25px;
   border-left: 1px solid $primary-light-blue;
+  div {
+    font-size: 25px;
+    line-height: 33px;
+  }
   strong {
     @extend %pirmary-font-medium;
+    font-size: 25px;
+
   }
 }
 
@@ -74,8 +83,11 @@
   .profile-text {
     margin: 0 0 90px 0;
 
-    font-size: 33px;
-    line-height: 41px;
+    font-size: 25px;
+    line-height: 33px;
+    &:last-child {
+      margin: 0;
+    }
   }
   .bg-text {
     max-width: 450px;

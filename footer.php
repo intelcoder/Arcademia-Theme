@@ -22,7 +22,7 @@
    </div>
    <div class="logos-container col-xs-12 col-sm-4 col-md-4 center-md center-sm middle-md middle-sm">
      <div class="facebook-svg"><?php inline_svg('facebook') ?></div>
-     <div class="instagram-svg"><?php inline_svg('instagram') ?></div>
+     <a href="https://www.instagram.com/arcademiagroupinc/"><div class="instagram-svg"><?php inline_svg('instagram') ?></div></a>
    </div>
    <div class="footer-menu col-xs-12 col-sm-4 col-md-4 end-sm end-md no-padding">
     <?php wp_nav_menu();?>

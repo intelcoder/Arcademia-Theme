@@ -33,15 +33,15 @@
     <?php endwhile; ?>
   </div>
 </div>
-<div class="main-body-container ">
-  <?php 
-    $left['link'] = "/testimonials";
-    $left['label'] = 'TESTIMONIALS';
-    $right['link'] = "/contact";
-    $right['label'] = 'CONTACT US';
-    include(locate_template('template-parts/page-bottom-links.php'));
-  ?>
-</div>
+
+<?php 
+  $left['link'] = "/testimonials";
+  $left['label'] = 'TESTIMONIALS';
+  $right['link'] = "/contact";
+  $right['label'] = 'CONTACT US';
+  include(locate_template('template-parts/page-bottom-links.php'));
+?>
+
 
 
   <?php get_footer(); wp_footer(); ?>

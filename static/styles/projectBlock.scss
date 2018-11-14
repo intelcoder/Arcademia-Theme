@@ -30,6 +30,8 @@
     @extend %pirmary-font-light;
     font-size: 25px;
     padding: 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
 }
 .gallery-link {

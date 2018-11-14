@@ -2,7 +2,9 @@
 // Footer
 
 .footer {
-  padding: 2.5rem 0 0 0;
+
+  // remove line-height
+  margin-top: -5px;
   .menu-header-container {
     .menu {
       padding: 0 0.5rem;
@@ -15,8 +17,10 @@
     }
     a {
       font-weight: 500;
-      font-size:17px;
+      font-size: 25px;
       color: black;
+      letter-spacing: 4px;
+      line-height: 36px;
     }
   }
 }
@@ -24,7 +28,7 @@
 .location {}
 .footer-office {
   font-weight: 400;
-  margin: 1rem 0rem;
+  margin: 0 0 1rem 0;
   font-size: 25px;
   font-family: $primary-font;
   letter-spacing: 2px;
@@ -32,8 +36,9 @@
 .address {
   margin-top: 0.25rem;
   > div {
-    font-size: 17px;
-    font-family: $secondary-font;
+    @extend %secondary-font-light;
+    font-size: 16px;
+  
     line-height: 25px;
   }
 }
@@ -43,14 +48,14 @@
   color: $primary-dark-grey; 
   margin-top: 45px;
   margin-bottom: 60px;
-  font-size: 0.9rem;
+  @extend %secondary-font-light;
 }
 .footer-menu {
   padding: 0;
 }
 .logos-container {
   @extend %flex-center;
-  > div {
+  > div, a {
     padding: 0 0.5rem;
   }
   svg {
@@ -72,28 +77,45 @@
 @media screen and (max-width: 47.9em) {
   .location {
     order: 1;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
+  }
+  .footer-office {
+    font-size: 20px;
+    text-align: center;
+    margin: -2px 0 0 0;
   }
   .footer-menu  {
     order: 2;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
+
   }
   .logos-container {
     order: 3;
+    svg {
+      fill: $primary-yellow;
+      width: 25px;
+      height: 25px;
+    }
+    // instagram icon has some padding
+    .instagram-svg svg {
+      width: 31px;
+      height:31px;
+    }
   }
   .reserve {
     order: 4;
-    margin-top: 55px;
+    margin-top: 25px;
+    font-size: 14px;
   }
   .footer {
-    padding: 80px 0 0 0 !important;
+    padding: 0 0 0 0 !important;
     .address {
       display: flex;
       flex-direction: column;
       align-items: center;
       > div {
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 14px;
+        line-height: 25px;
       }
     }
     .menu-header-container {
@@ -101,14 +123,11 @@
         align-items: center;
       }
       a {
-        font-size: 18px;
+        font-size: 20px;
         color: black;
+        line-height: 25px;
       }
     }
   }
-  .footer-office {
-    font-size: 25px;
-    text-align: center;
-    margin: 0 0 1rem 0;
-  }
+  
 }

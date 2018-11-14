@@ -33,7 +33,7 @@
         <div class="section-title"><?php echo(get_the_title())?></div>
         <div class="address-container">
           <div class=""><?php echo($meta['address'][0]) ?></div>
-          <div><?php echo($meta['city'][0]) ?>, <?php echo($meta['province'][0]) ?></div>
+          <div><?php echo($meta['city'][0]) ?>, <?php echo($meta['provinceprovince'][0]) ?></div>
           <div><?php echo($meta['postal_code'][0]) ?></div>
         </div>
         <div>
@@ -102,21 +102,20 @@
     </div>
     <div class="credit-container">
       <div class="section-title">PHOTOGRAPHY CREDITS</div>
-      <div></div>
+      <div class="credits">
+      <?php echo get_theme_mod('contact_photography_credits') ?>
+      </div>
     </div>
-
-
   </div>
-  <?php 
-    $left['link'] = "/profile";
-    $left['label'] = 'OUR PROFILE';
-    $right['link'] = "/projects";
-    $right['label'] = 'OUR PROJECTs';
-    include(locate_template('template-parts/page-bottom-links.php'));
-  ?>
- 
 </div>
+<?php 
+  $left['link'] = "/profile";
+  $left['label'] = 'OUR PROFILE';
+  $right['link'] = "/projects";
+  $right['label'] = 'OUR PROJECTs';
+  include(locate_template('template-parts/page-bottom-links.php'));
+?>
 
-  <?php get_footer(); wp_footer(); ?>
+<?php get_footer(); wp_footer(); ?>
 </body>
 </html>

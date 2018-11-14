@@ -43,7 +43,7 @@
    
     <div class="testimonial-page">
       <div class="row featured-in-container  ">
-        <div class="featured-in">Also Featured In</div>
+        <div class="featured-in">Featured In</div>
         <div class="white-line-container no-padding">
             <div class="white-line"></div>
         </div>
@@ -72,17 +72,14 @@
     </div>
   </div>
 
- <div class="main-body-container ">
-    <?php 
-      $left['link'] = "/contact";
-      $left['label'] = 'CONTACT US';
-      $right['link'] = "/profile";
-      $right['label'] = 'OUR PROFILE';
-      include(locate_template('template-parts/page-bottom-links.php'));
-    ?>
-  </div>
 </div>
-
+<?php 
+  $left['link'] = "/contact";
+  $left['label'] = 'CONTACT US';
+  $right['link'] = "/profile";
+  $right['label'] = 'OUR PROFILE';
+  include(locate_template('template-parts/page-bottom-links.php'));
+?>
 
 <?php get_footer(); wp_footer(); ?>
 </body>

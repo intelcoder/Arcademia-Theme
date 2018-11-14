@@ -26,10 +26,12 @@ $mobile-header-size: 86px;
 }
 .menu-item {
   a {
-    font-size: 23px;
+    @extend %pirmary-font-light;
+    font-size: 25px;
     text-transform: uppercase;
-    font-family: $primary-font;
     color: white;
+    letter-spacing: 2px;
+  
   }
 }
 .logo-with-line {

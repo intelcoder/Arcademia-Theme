@@ -989,15 +989,15 @@ template {
   align-items: center;
   justify-content: center;
 }
-.project-detail-container div, .contact-inputs .send-button, .main-body-container .profile-box-inner, .main-body-container .profile-box-inner .link-btn, .main-body-container .project-box-inner, .main-body-container .project-box-inner .link-btn-project {
+.menu-item a, .project-detail-container div, .contact-inputs .send-button, .featured-link div, .main-body-container .profile-box-inner div, .main-body-container .project-box-inner div, .main-body-container .profile-box-inner, .main-body-container .profile-box-inner .link-btn, .main-body-container .project-box-inner, .main-body-container .project-box-inner .link-btn-project {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
-.bg-text, .profile strong, .contact-heading, .featured-link div, .section-title {
+.bg-text, .profile strong, .contact-heading, .testimonial-writer, .section-title, .review-writer {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
 }
-.profile-text, .review {
+.address > div, .reserve, .profile-text, .credits, .review {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
@@ -1031,10 +1031,10 @@ template {
   display: flex;
 }
 .menu-item a {
-  font-size: 23px;
+  font-size: 25px;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
   color: white;
+  letter-spacing: 2px;
 }
 .logo-with-line {
   width: 50%;
@@ -1216,7 +1216,7 @@ template {
   }
 }
 .footer {
-  padding: 2.5rem 0 0 0;
+  margin-top: -5px;
 }
 .footer .menu-header-container .menu {
   padding: 0 0.5rem;
@@ -1229,12 +1229,14 @@ template {
 }
 .footer .menu-header-container a {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 25px;
   color: black;
+  letter-spacing: 4px;
+  line-height: 36px;
 }
 .footer-office {
   font-weight: 400;
-  margin: 1rem 0rem;
+  margin: 0 0 1rem 0;
   font-size: 25px;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
@@ -1243,8 +1245,7 @@ template {
   margin-top: 0.25rem;
 }
 .address > div {
-  font-size: 17px;
-  font-family: 'Lato', sans-serif;
+  font-size: 16px;
   line-height: 25px;
 }
 .reserve {
@@ -1253,12 +1254,11 @@ template {
   color: #878787;
   margin-top: 45px;
   margin-bottom: 60px;
-  font-size: 0.9rem;
 }
 .footer-menu {
   padding: 0;
 }
-.logos-container > div {
+.logos-container > div, .logos-container a {
   padding: 0 0.5rem;
 }
 .logos-container svg {
@@ -1278,21 +1278,36 @@ template {
 @media screen and (max-width: 47.9em) {
   .location {
     order: 1;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
+  }
+  .footer-office {
+    font-size: 20px;
+    text-align: center;
+    margin: -2px 0 0 0;
   }
   .footer-menu {
     order: 2;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
   }
   .logos-container {
     order: 3;
   }
+  .logos-container svg {
+    fill: #ecbc2b;
+    width: 25px;
+    height: 25px;
+  }
+  .logos-container .instagram-svg svg {
+    width: 31px;
+    height: 31px;
+  }
   .reserve {
     order: 4;
-    margin-top: 55px;
+    margin-top: 25px;
+    font-size: 14px;
   }
   .footer {
-    padding: 80px 0 0 0 !important;
+    padding: 0 0 0 0 !important;
   }
   .footer .address {
     display: flex;
@@ -1300,20 +1315,16 @@ template {
     align-items: center;
   }
   .footer .address > div {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 25px;
   }
   .footer .menu-header-container .menu {
     align-items: center;
   }
   .footer .menu-header-container a {
-    font-size: 18px;
+    font-size: 20px;
     color: black;
-  }
-  .footer-office {
-    font-size: 25px;
-    text-align: center;
-    margin: 0 0 1rem 0;
+    line-height: 25px;
   }
 }
 /*!
@@ -1459,16 +1470,20 @@ template {
   height: 100%;
   text-transform: uppercase;
 }
+.title-box-inner > div {
+  margin-top: -3px;
+}
 .title-box-title {
   letter-spacing: 14px;
-  font-size: 66px;
+  font-size: 60px;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
+  transform: translateX(8px);
 }
 .title-box-sub {
   letter-spacing: 3px;
   color: #75b7fa;
-  font-size: 33px;
+  font-size: 30px;
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   text-align: center;
@@ -1478,11 +1493,11 @@ template {
   .title-box {
     width: 400px;
     height: 165px;
-    transform: translateX(-50%) translateY(-25%);
     padding-bottom: 4rem;
   }
   .title-box-title {
     font-size: 41px;
+    letter-spacing: 8px;
   }
   .title-box-sub {
     font-size: 25px;
@@ -1526,6 +1541,8 @@ template {
 .project-detail-container div {
   font-size: 25px;
   padding: 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 .gallery-link {
   letter-spacing: 4px;
@@ -1573,8 +1590,7 @@ template {
   width: 100%;
   height: 260px;
   background-color: #253050;
-  margin-top: 76px;
-  margin-bottom: 76px;
+  margin: 60px 0;
 }
 .page-link-block-inner {
   border: 1px solid white;
@@ -1625,17 +1641,125 @@ template {
   }
   .page-link-block {
     height: 490px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-link-block-inner {
+    padding: 30px;
+  }
+  .page-link-block-inner > div {
+    padding: 0;
+  }
+  .page-link-block {
+    height: auto;
+  }
+  .first-link-container, .last-link-container {
+    padding: 40px;
+  }
+  .first-link-container a, .last-link-container a {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 599px) {
+  .page-link-block-inner .white-line {
+    max-width: calc(100% - 20px);
+  }
   .page-link-block-inner > div > div {
     max-width: 100%;
     flex-basis: 100%;
   }
 }
-@media screen and (max-width: 599px) {
-  .page-link-block {
-    height: 330px;
+.home-hero {
+  position: relative;
+}
+.years-upper-text {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 8px;
+  color: white;
+  font-weight: 500;
+}
+.years {
+  font-size: 60px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: white;
+  white-space: nowrap;
+}
+.year-period {
+  font-size: 25px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 4px;
+}
+@media screen and (min-width: 767px) {
+  .home-hero-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+  .year-period {
+    text-align: right;
+    position: relative;
+  }
+  .year-period:before {
+    content: " ";
+    width: 45%;
+    height: 0;
+    position: absolute;
+    border-bottom: 1px solid;
+    left: 0;
+    top: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-hero-content-container {
+    max-width: 630px;
+    display: flex !important;
+  }
+  .hero-content {
+    margin: 3rem 3rem 1.1rem 3rem;
+    display: inline-block;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .years-upper-text {
+    font-size: 44px;
+    color: initial;
+  }
+  .years {
+    font-size: 88px;
+    line-height: 110px;
+    color: initial;
+  }
+  .year-period {
+    font-size: 33px;
+    margin-top: 20px;
+    color: initial;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero-content {
+    margin: 3rem auto 0 auto;
+  }
+  .years-upper-text {
+    font-size: 8vw;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .years {
+    font-size: 15vw;
+    line-height: 1;
+    margin-top: -10px;
+  }
+  .year-period {
+    margin-top: 35px;
   }
 }
 #profile-page .page-link-block {
@@ -1644,12 +1768,12 @@ template {
 .profile-bg-section {
   height: 525px;
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 .profile-text {
-  font-size: 25px;
-  line-height: 33px;
-  margin: 0 0 70px 0;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 0 55px 0;
 }
 .profile-page-container {
   margin: -20px auto 0 auto;
@@ -1657,8 +1781,13 @@ template {
 .profile-page-container-bottom {
   margin: 0 auto 0 auto;
 }
+.profile-page-container-bottom .profile-text {
+  margin: 0;
+}
 .bg-text {
-  font-size: 33px;
+  max-width: 534px;
+  font-size: 30px;
+  line-height: 50px;
   position: absolute;
   color: white;
   top: 50%;
@@ -1667,13 +1796,18 @@ template {
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
   text-transform: uppercase;
-  line-height: 50px;
-  max-width: 600px;
 }
 .profile {
   margin-bottom: 20px;
   padding: 10px 25px;
   border-left: 1px solid #75b7fa;
+}
+.profile div {
+  font-size: 25px;
+  line-height: 33px;
+}
+.profile strong {
+  font-size: 25px;
 }
 @media screen and (max-width: 63.9em) {
   .profile-page-container {
@@ -1701,8 +1835,11 @@ template {
   }
   .profile-text {
     margin: 0 0 90px 0;
-    font-size: 33px;
-    line-height: 41px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .profile-text:last-child {
+    margin: 0;
   }
   .bg-text {
     max-width: 450px;
@@ -1747,14 +1884,19 @@ template {
 }
 .contact-inputs input, .contact-inputs textarea {
   width: calc(100% - 1rem);
-  height: 34px;
+  height: 40px;
   margin-bottom: 25px;
   padding: 0 0.5rem;
-  border: 1px solid #75b7fa;
+  font-size: 25px;
+  color: #75b7fa;
+  border: 2px solid #75b7fa;
   resize: none;
 }
 .contact-inputs input::placeholder, .contact-inputs textarea::placeholder {
   color: #75b7fa;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
 }
 .contact-inputs textarea {
   padding-top: 0.5rem;
@@ -1808,6 +1950,9 @@ template {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.credits {
+  font-size: 25px;
+}
 @media screen and (min-width: 63.9em) {
   .google-map {
     margin-right: 73px;
@@ -1842,7 +1987,7 @@ template {
   .credit-container {
     max-width: 574px;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 60px;
   }
   .location-block {
     max-width: 400px;
@@ -1898,36 +2043,40 @@ template {
   padding: 0 15px;
   margin: -2rem auto 0 auto;
 }
+.testimonial-container {
+  max-width: 718px;
+}
 .testimonial-container:last-child {
   margin-bottom: 60px;
 }
 .testimonial {
   width: 100%;
   margin-bottom: 50px;
+  margin-top: -5px;
 }
 .testimonial .content {
-  letter-spacing: 2px;
   font-size: 20px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 24px;
 }
 .testimonial-writer {
   text-align: right;
-  margin-top: 40px;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
 }
 .featured-in-container {
-  max-width: calc(718px + 30px);
-  padding: 0 15px;
+  max-width: calc(718px);
+  padding: 0;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 70px;
 }
 .featured-in-container .white-line-container {
-  width: calc(100% - 486px);
+  width: calc(100% - 200px);
+  margin-left: 25px;
 }
 .featured-in-container .white-line {
   width: 100%;
@@ -1935,11 +2084,11 @@ template {
 }
 .featured-in {
   color: #ecbc2b;
-  letter-spacing: 12px;
+  letter-spacing: 4px;
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 41px;
+  font-size: 25px;
 }
 .featured-link {
   max-width: calc(718px + 30px);
@@ -1947,7 +2096,7 @@ template {
 }
 .featured-link > div {
   margin-right: 40px;
-  line-height: 35px;
+  line-height: 33px;
 }
 .featured-link > div:last-child {
   margin-right: 0;
@@ -1967,19 +2116,24 @@ template {
     max-width: calc(574px + 40px);
   }
   .testimonial-page .content {
-    font-size: 33px;
-    line-height: 41px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .testimonial-page .testimonial-writer {
-    font-size: 33px;
-    line-height: 41px;
-    margin-top: 48px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  .featured-in-container {
+    margin-bottom: 30px;
   }
   .featured-in-container .white-line-container {
     display: none;
   }
   .featured-in {
+    font-size: 20px;
     text-align: center;
+    width: 100%;
   }
   .featured-link {
     flex-direction: column;
@@ -1990,12 +2144,17 @@ template {
     margin: 0 0 36px 0;
   }
   .featured-link div {
+    font-size: 20px;
     text-align: center;
+    line-height: 25px;
+  }
+  .featured-link div:last-child {
+    margin-bottom: 0;
   }
 }
 .section-title {
   font-size: 33px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin-bottom: 40px;
 }
 div {
@@ -2091,6 +2250,21 @@ a {
 .main-body-container .link-btn, .main-body-container .link-btn-project {
   cursor: pointer;
 }
+.main-body-container .profile-box-inner div, .main-body-container .project-box-inner div {
+  font-size: 25px;
+  line-height: 36px;
+  letter-spacing: 2px;
+}
+.main-body-container .profile-box-inner a, .main-body-container .project-box-inner a {
+  font-size: 25px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  display: flex;
+}
+.main-body-container .profile-box-inner a .arrow, .main-body-container .project-box-inner a .arrow {
+  padding-left: 5px;
+  margin-top: -2px;
+}
 .main-body-container .profile-box-inner .link-btn {
   background: #ecbc2b;
   margin-top: 4rem;
@@ -2109,22 +2283,23 @@ a {
   letter-spacing: 2px;
 }
 .review-container {
-  margin: 4rem 0 0 0;
+  margin: 60px 0 0 0;
   font-family: 'Lato', sans-serif;
   line-height: 1.5rem;
 }
 .review {
-  font-size: 16px;
-  font-height: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: -5px;
 }
 .review-writer {
-  font-weight: bold;
   color: #ecbc2b;
+  font-size: 20px;
   float: right;
   margin-top: 2rem;
 }
-.review-block {
-  margin: 0.5rem 0;
+.home-hero-content-container {
+  display: block;
 }
 @media screen and (min-width: 1440px) {
   .hero-image-container {
@@ -2162,9 +2337,6 @@ a {
   .small-screen-header {
     display: none;
   }
-  .home-hero-content-container {
-    display: none;
-  }
   .main-body-container .profile-image {
     height: 340px !important;
   }
@@ -2176,16 +2348,8 @@ a {
     width: 240px;
     margin-top: 2rem !important;
   }
-  .main-body-container .link-btn a, .main-body-container .link-btn-project a {
-    font-size: 1.3rem;
-  }
   .main-body-container .profile-box-inner, .main-body-container .project-box-inner {
     font-size: 1.3rem;
-  }
-}
-@media screen and (min-width: 767px) {
-  .home-hero-content-container {
-    display: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2204,82 +2368,59 @@ a {
   }
   .main-body-container .link-btn, .main-body-container .link-btn-project {
     width: 200px;
+    margin-top: 30px !important;
   }
-  .main-body-container .link-btn a, .main-body-container .link-btn-project a {
-    font-size: 1.2rem;
-  }
-  .main-body-container .project-box-inner, .main-body-container .profile-box-inner {
-    font-size: 1.2rem;
+  .main-body-container .project-box-inner div, .main-body-container .profile-box-inner div {
+    line-height: 30px;
   }
   .review-container {
-    padding: 0 2.5rem;
+    margin: 4rem auto 0 auto;
+    max-width: 500px;
+    padding: 0 30px;
   }
-  .home-hero-content-container {
-    max-width: 630px;
-    margin: 0 auto;
-    display: flex;
+  .review {
+    line-height: 25px;
   }
-  .hero-content {
-    margin: 3rem auto;
-    display: inline-block;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .years-upper-text {
-    font-size: 44px;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 8px;
-  }
-  .years {
-    font-size: 88px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    letter-spacing: 10px;
-    line-height: 110px;
-  }
-  .year-period {
-    font-size: 33px;
+  .review-writer {
+    font-weight: 400;
+    color: #ecbc2b;
+    float: right;
     margin-top: 20px;
-  }
-  .featured-in {
-    font-size: 41px;
-    text-align: center;
-    width: 100%;
   }
   .featured-in-container .white-line {
     display: none;
   }
-  .profile-project-col .profile-box-inner {
-    padding: 60px;
+  .review-block {
+    margin: 0 0 50px 0;
+  }
+  .review-block:last-child {
+    margin-bottom: 0;
+  }
+  .profile-project-col .profile-box-inner, .profile-project-col .project-box-inner {
+    padding: 30px;
     height: auto;
     font-size: 25px;
-    margin: 70px 50px;
+    margin: 40px 30px;
   }
-  .profile-project-col .profile-box-inner > div {
-    padding: 0 70px;
+  .profile-project-col .profile-box-inner > div, .profile-project-col .project-box-inner > div {
+    padding: 0;
+    margin-top: -10px;
     text-align: center;
+    font-size: 20px;
   }
-  .profile-project-col .project-box-inner {
-    padding: 60px;
-    height: auto;
-    font-size: 25px;
-    margin: 70px 50px;
+  .profile-project-col .profile-box-inner a div, .profile-project-col .project-box-inner a div {
+    font-size: 20px;
   }
-  .profile-project-col .project-box-inner > div {
-    padding: 0 70px;
-    text-align: center;
-  }
-  .profile-project-col .link-btn-project {
-    width: 293px;
+  .profile-project-col .link-btn, .profile-project-col .link-btn-project {
+    width: 45vw;
     height: 50px;
   }
   .profile-project-col .link-btn-project a {
     font-size: 25px;
   }
-  .review-container {
-    margin: 4rem auto 0 auto;
-    max-width: 500px;
-    padding: 0 15px;
+}
+@media screen and (max-width: 414px) {
+  .profile-box-inner > div {
+    font-size: 20px;
   }
 }

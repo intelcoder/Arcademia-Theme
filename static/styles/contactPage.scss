@@ -1,5 +1,6 @@
 $form-credit-mobile-size: 574px;
 $mobile-body-width: 400px;
+$input-font-size: 25px;
 
 // Contact page 
 .contact-page {
@@ -17,17 +18,17 @@ $mobile-body-width: 400px;
     white-space: nowrap;
     font-family: $secondary-font;
     font-weight: 300;
-    font-size: 25px;
+    font-size: $input-font-size;
   }
   
 }
 .contact-heading {
   @extend %pirmary-font-medium;
-  font-size: 25px;
+  font-size: $input-font-size;
   & + span{
     font-family: $secondary-font;
     font-weight: 300;
-    font-size: 25px;
+    font-size: $input-font-size;
    
   }
 }
@@ -42,14 +43,19 @@ $mobile-body-width: 400px;
   margin-top: 118px !important;
   input, textarea {
     width: calc(100% - 1rem);
-    height: 34px;
+    height: 40px;
     margin-bottom: 25px;
     padding: 0 0.5rem;
-    border: 1px solid $primary-light-blue;
+    font-size: $input-font-size;
+    color: $primary-light-blue;
+    border: 2px solid $primary-light-blue;
     resize: none;
   }
   input::placeholder,  textarea::placeholder {
     color: $primary-light-blue;
+    font-family: $primary-font;
+    font-weight: 300;
+    letter-spacing: 4px;
   }
  
   textarea {
@@ -62,7 +68,7 @@ $mobile-body-width: 400px;
     border: 0;
     background-color: $primary-light-blue;
     padding: 0.25rem 1.3rem;
-    font-size: 25px;
+    font-size: $input-font-size;
     color: white;
     letter-spacing: 2px;
   }
@@ -81,7 +87,7 @@ $mobile-body-width: 400px;
   margin-top: 60px;
 }
 .manager-contact {
-  font-size: 25px;
+  font-size:$input-font-size;
   margin-bottom: 40px;
   line-height: 33px;
   .dash {
@@ -111,8 +117,11 @@ $mobile-body-width: 400px;
     text-overflow: ellipsis;
   }
 }
+.credits {
+  @extend %secondary-font-light;
+  font-size: $input-font-size;
 
-
+}
 @media screen and (min-width: $large-screen-break) {
   .google-map {
     margin-right: 73px;
@@ -153,7 +162,7 @@ $mobile-body-width: 400px;
   .credit-container {
     max-width: $form-credit-mobile-size;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 60px;
   }
   .location-block {
     max-width: $mobile-body-width;
@@ -163,8 +172,8 @@ $mobile-body-width: 400px;
   .manager-contacts {
     max-width: $mobile-body-width;
     margin: 60px auto 0 auto;
-  
   }
+  
   .manager-contact {
     padding: 0 1rem;
   }

@@ -11,6 +11,7 @@
 @import "./styles/projectBlock.scss";
 @import "./styles/pageBottomLinkBox.scss";
 // pages
+@import "./styles/homePage.scss";
 @import "./styles/profilePage.scss";
 @import "./styles/contactPage.scss";
 @import "./styles/projectPage.scss";
@@ -19,7 +20,7 @@
 .section-title {
   @extend %pirmary-font-medium;
   font-size: 33px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin-bottom: 40px;
 }
 
@@ -71,6 +72,7 @@ a {
   height: 51px;
   width: 300px;
   font-size: 1.5rem;
+  
 }
 .link-btn-project {
   height: 51px;
@@ -108,6 +110,8 @@ a {
   }
 }
 
+
+
 .main-body-container {
   position: relative;
   img {
@@ -126,7 +130,23 @@ a {
   .link-btn,
   .link-btn-project {
     cursor: pointer;
-    &:hover {
+  }
+  .profile-box-inner, .project-box-inner {
+    div {
+      @extend %pirmary-font-light;
+      font-size: 25px;
+      line-height: 36px;
+      letter-spacing: 2px;
+    }
+    a {
+      font-size: 25px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      display: flex;
+      .arrow {
+        padding-left: 5px;
+        margin-top: -2px;
+      }
     }
   }
   .profile-box-inner {
@@ -160,32 +180,33 @@ a {
 }
 
 .review-container {
-  margin: 4rem 0 0 0;
+  margin: 60px 0 0 0;
 
   font-family: $secondary-font;
   line-height: 1.5rem;
 }
 .review {
   @extend %secondary-font-light;
-  font-size: 16px;
-  font-height: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: -5px;
 }
 .review-writer {
-  font-weight: bold;
+  @extend %pirmary-font-medium;
   color: $primary-yellow;
+  font-size: 20px;
   float: right;
   margin-top: 2rem;
 }
 .review-block {
-  margin: 0.5rem 0;
 }
 
 
-.large-screen-header {
+.large-screen-header {}
+.small-screen-header {}
+.home-hero-content-container {
+  display: block;
 }
-.small-screen-header {
-}
-
 @media screen and(min-width: 1440px) {
   .hero-image-container {
     max-height: 702px;
@@ -227,9 +248,6 @@ a {
   .small-screen-header {
     display: none;
   }
-  .home-hero-content-container {
-    display: none;
-  }
   .main-body-container {
     .profile-image {
       height: 340px !important;
@@ -242,9 +260,6 @@ a {
       height: 48px;
       width: 240px;
       margin-top: 2rem !important;
-      a {
-        font-size: 1.3rem;
-      }
     }
     .profile-box-inner,
     .project-box-inner {
@@ -253,11 +268,7 @@ a {
   }
 }
 
-@media screen and (min-width: $small-screen-break) {
-  .home-hero-content-container {
-    display: none;
-  }
-}
+
 @media screen and (max-width: $small-screen-break) {
   .large-screen-header {
     display: none;
@@ -276,95 +287,74 @@ a {
     .link-btn,
     .link-btn-project {
       width: 200px;
-      a {
-        font-size: 1.2rem;
-      }
+      margin-top: 30px !important;
     }
     .project-box-inner,
     .profile-box-inner {
-      font-size: 1.2rem;
+      div {
+        line-height: 30px;
+      }
     }
   }
   .review-container {
-    padding: 0 2.5rem;
+    margin: 4rem auto 0 auto;
+    max-width: 500px;
+    padding: 0 30px;
   }
 
+  .review {
   
-
-  .home-hero-content-container {
-    max-width: 630px;
-    margin: 0 auto;
-    display: flex;
+    line-height: 25px;
   }
-  .hero-content {
-    margin: 3rem auto;
-    display: inline-block;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .years-upper-text {
-    font-size: 44px;
-    text-transform: uppercase;
-    font-family: $primary-font;
-    letter-spacing: 8px;
-  }
-  .years {
-    font-size: 88px;
-    font-family: $primary-font;
-    font-weight: bold;
-    letter-spacing: 10px;
-    line-height: 110px;
-  }
-  .year-period {
-    font-size: 33px;
+  .review-writer {
+    font-weight: 400;
+    color: $primary-yellow;
+    float: right;
     margin-top: 20px;
   }
 
-  .featured-in {
-    font-size: 41px;
-    text-align: center;
-    width: 100%;
-  }
 
   .featured-in-container {
     .white-line {
       display: none;
     }
   }
-  .profile-project-col {
-    .profile-box-inner {
-      padding: 60px;
-      height: auto;
-      font-size: 25px;
-      margin: 70px 50px;
-      > div {
-        padding: 0 70px;
-        text-align: center;
-      }
+
+  .review-block {
+    margin: 0 0 50px 0;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   .profile-project-col {
-    .project-box-inner {
-      padding: 60px;
+    .profile-box-inner, .project-box-inner {
+      padding: 30px;
       height: auto;
       font-size: 25px;
-      margin: 70px 50px;
+      margin: 40px 30px;
       > div {
-        padding: 0 70px;
+        padding: 0;
+        margin-top: -10px;
         text-align: center;
+        font-size: 20px;
+      }
+      a div {
+        font-size: 20px;
       }
     }
+    .link-btn,
     .link-btn-project {
-      width: 293px;
+      width: 45vw;
       height: 50px;
     }
     .link-btn-project a {
       font-size: 25px;
     }
   }
-  .review-container {
-    margin: 4rem auto 0 auto;
-    max-width: 500px;
-    padding: 0 15px;
+  
+}
+@media screen and (max-width: 414px) {
+  .profile-box-inner > div {
+    font-size: 20px;
   }
 }

@@ -37,7 +37,10 @@
               <div>
                 <?php echo get_theme_mod('homepage_heading') ?>
                 <div class="link-btn ">
-                  <a href="contact"><?php echo get_theme_mod('home_profile_button_text') ?> <span>></span></a>
+                  <a href="/profile">
+                    <div><?php echo get_theme_mod('home_profile_button_text') ?></div>
+                    <div class="arrow">></div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -53,7 +56,10 @@
               <div>
                 <?php echo get_theme_mod('home_project_box_text_setting') ?>
                 <div class="link-btn-project">
-                  <a href="/projects">OUR PROJECT <span>></span></a>
+                  <a href="/projects">
+                  <div><?php echo get_theme_mod('home_project_button_text') ?></div>
+                  <div class="arrow">></div>
+                </a>
                 </div>
               </div>
             </div>
@@ -78,6 +84,9 @@
       </div>
     <?php endwhile; ?>
   </div>
+
+</div>
+
   <?php 
     $left['link'] = "/testimonials";
     $left['label'] = 'MORE TESTIMONIALS';
@@ -85,9 +94,6 @@
     $right['label'] = 'CONTACT US';
     include(locate_template('template-parts/page-bottom-links.php'));
   ?>
-</div>
-
-
  
 
 <?php get_footer(); wp_footer(); ?>

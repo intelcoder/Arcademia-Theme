@@ -116,7 +116,6 @@ function arcademia_customize_register( $wp_customize ) {
     $wp_customize -> add_setting('home_project_button_text', array(
         'transport'      => 'refresh',
         'height'         => 325,
-        'type' => 'theme_mode'
     ));
 
     $wp_customize -> add_control('home_project_button_text', array(
@@ -217,7 +216,7 @@ function arcademia_customize_register( $wp_customize ) {
     )));
 
       // Setting for the rect box which overlaps with hero
-      $wp_customize -> add_setting('contact_hero_box_subtitle', array(
+    $wp_customize -> add_setting('contact_hero_box_subtitle', array(
         'transport'         => 'refresh',
         'height'         => 325,
     ));
@@ -237,6 +236,17 @@ function arcademia_customize_register( $wp_customize ) {
         'settings'   => 'contact_hero_box_title',
     ));
 
+    $wp_customize -> add_setting('contact_photography_credits', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('contact_photography_credits', array(
+        'label' => __('Photography Credits', 'arcademia'),
+        'section' => 'contactPage',
+        'settings'   => 'contact_photography_credits',
+        'type' => 'textarea'
+    ));
 
     // Profile Page  Theme Customize
     $wp_customize -> add_section('profilePage', array(
