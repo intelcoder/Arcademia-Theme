@@ -1,6 +1,6 @@
 $form-credit-mobile-size: 574px;
 $mobile-body-width: 400px;
-$input-font-size: 25px;
+$input-font-size: 20px;
 
 // Contact page 
 .contact-page {
@@ -14,11 +14,13 @@ $input-font-size: 25px;
 }
 .address-container {
   margin-bottom: 40px;
+  margin-top: -5px;
   div {
+    font-size: 20px;
     white-space: nowrap;
     font-family: $secondary-font;
     font-weight: 300;
-    font-size: $input-font-size;
+    line-height: 24px;
   }
   
 }
@@ -40,13 +42,13 @@ $input-font-size: 25px;
   }
 }
 .contact-inputs {
-  margin-top: 118px !important;
+  margin-top: 60px !important;
   input, textarea {
     width: calc(100% - 1rem);
     height: 40px;
     margin-bottom: 25px;
     padding: 0 0.5rem;
-    font-size: $input-font-size;
+    font-size: 25px;
     color: $primary-light-blue;
     border: 2px solid $primary-light-blue;
     resize: none;
@@ -68,7 +70,7 @@ $input-font-size: 25px;
     border: 0;
     background-color: $primary-light-blue;
     padding: 0.25rem 1.3rem;
-    font-size: $input-font-size;
+    font-size: 25px;
     color: white;
     letter-spacing: 2px;
   }
@@ -78,25 +80,25 @@ $input-font-size: 25px;
     
   }
 }
-.credit-container {
-  padding: 0.5rem;
-  margin-top: 80px;
-}
+
 
 .manager-contacts {
   margin-top: 60px;
 }
 .manager-contact {
   font-size:$input-font-size;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   line-height: 33px;
+  
   .dash {
     padding: 0 0.5rem;
   }
   .manager-title {
+    font-size: 25px;
     font-family: $primary-font;
     font-weight: 600;
     letter-spacing: 2px;
+  
     margin: 0;
   }
   
@@ -117,14 +119,28 @@ $input-font-size: 25px;
     text-overflow: ellipsis;
   }
 }
+.credit-container {
+  padding: 0.5rem;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
 .credits {
   @extend %secondary-font-light;
   font-size: $input-font-size;
-
+  line-height: 30px;
+  margin-top: -30px;
+}
+.google-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+}
+.office-name {
+  margin-top: 50px;
 }
 @media screen and (min-width: $large-screen-break) {
   .google-map {
-    margin-right: 73px;
+    margin-right: 60px;
   }
   .location-block {
     flex-wrap: nowrap
@@ -145,6 +161,15 @@ $input-font-size: 25px;
       @extend %responsive-image;
     }
   }
+  .office-name {
+    font-size: 20px;
+  }
+  .address-container {
+  
+    div {
+      font-size: 20px;
+    }
+  }
   .location-block {
     flex-wrap: wrap;
   }
@@ -155,7 +180,7 @@ $input-font-size: 25px;
   }
   .contact-inputs {
     max-width: $form-credit-mobile-size;
-    margin: 118px auto 0 auto !important;
+    margin: 30px auto 0 auto !important;
     padding: 0 0.5rem;
   }
  
@@ -199,9 +224,48 @@ $input-font-size: 25px;
    
     letter-spacing: initial;
   }
-  
+  .manager-contact {
+    .manager-title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    .small-extension {
+      font-size: 16px;
+      width: 100%;
+    }
+    a {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
   .manager-contact-info {
     letter-spacing: initial;
+  }
+  .office-name {
+    font-size: 20px;
+  }
+  .address-container div {
+    font-size: 16px;
+  }
+  .contact-heading {
+    font-size: 16px;
+    & + span{
+      font-size: 16px;
+    }
+  }
+
+  .contact-inputs {
+    margin-top: 30px !important;
+    .send-button {
+      font-size: 20px;
+    }
+    input, textarea {
+      font-size: 16px;
+    }
+  }
+  .credits {
+    line-height: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 33.9em) {

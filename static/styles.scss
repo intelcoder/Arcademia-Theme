@@ -16,10 +16,11 @@
 @import "./styles/contactPage.scss";
 @import "./styles/projectPage.scss";
 @import "./styles/testimonialPage.scss";
+@import "./styles/galleryPage.scss";
 
 .section-title {
   @extend %pirmary-font-medium;
-  font-size: 33px;
+  font-size: 25px;
   letter-spacing: 4px;
   margin-bottom: 40px;
 }

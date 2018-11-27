@@ -993,7 +993,7 @@ template {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
-.bg-text, .profile strong, .contact-heading, .testimonial-writer, .section-title, .review-writer {
+.project-block-inner .title, .bg-text, .profile strong, .contact-heading, .testimonial-writer, .section-title, .review-writer {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
 }
@@ -1531,18 +1531,20 @@ template {
   padding: 80px 0 0 100px;
 }
 .project-block-inner .title {
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
-  font-size: 33px;
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-size: 25px;
   margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+.project-detail-container {
+  margin-top: -5px;
 }
 .project-detail-container div {
   font-size: 25px;
   padding: 0.25rem 0;
   text-transform: uppercase;
   letter-spacing: 4px;
+  margin-bottom: 10pxl;
 }
 .gallery-link {
   letter-spacing: 4px;
@@ -1551,7 +1553,7 @@ template {
   .project-block {
     flex-direction: column;
     align-items: center;
-    margin: 0 0 90px 0;
+    margin: 0 0 25px 0;
     max-width: 402px;
     min-width: 402px;
   }
@@ -1564,7 +1566,11 @@ template {
     padding: 0;
   }
   .project-block-inner .title {
-    margin: 55px 0 40px 0;
+    margin: 30px 0 30px 0;
+    font-size: 20px;
+  }
+  .project-detail-container div {
+    font-size: 20px;
   }
   .project-block-contents {
     width: 100%;
@@ -1619,6 +1625,7 @@ template {
   letter-spacing: 2px;
   font-size: 25px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 .first-link-container a:hover .arrow, .white-line-container a:hover .arrow, .last-link-container a:hover .arrow {
   transform: translateX(3px);
@@ -1858,20 +1865,22 @@ template {
 }
 .address-container {
   margin-bottom: 40px;
+  margin-top: -5px;
 }
 .address-container div {
+  font-size: 20px;
   white-space: nowrap;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 25px;
+  line-height: 24px;
 }
 .contact-heading {
-  font-size: 25px;
+  font-size: 20px;
 }
 .contact-heading + span {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 20px;
 }
 .location-block {
   margin-bottom: 40px;
@@ -1880,7 +1889,7 @@ template {
   color: #75b7fa;
 }
 .contact-inputs {
-  margin-top: 118px !important;
+  margin-top: 60px !important;
 }
 .contact-inputs input, .contact-inputs textarea {
   width: calc(100% - 1rem);
@@ -1914,22 +1923,19 @@ template {
   display: flex;
   justify-content: flex-end;
 }
-.credit-container {
-  padding: 0.5rem;
-  margin-top: 80px;
-}
 .manager-contacts {
   margin-top: 60px;
 }
 .manager-contact {
-  font-size: 25px;
-  margin-bottom: 40px;
+  font-size: 20px;
+  margin-bottom: 20px;
   line-height: 33px;
 }
 .manager-contact .dash {
   padding: 0 0.5rem;
 }
 .manager-contact .manager-title {
+  font-size: 25px;
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
@@ -1950,12 +1956,27 @@ template {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.credit-container {
+  padding: 0.5rem;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
 .credits {
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: -30px;
+}
+.google-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+}
+.office-name {
+  margin-top: 50px;
 }
 @media screen and (min-width: 63.9em) {
   .google-map {
-    margin-right: 73px;
+    margin-right: 60px;
   }
   .location-block {
     flex-wrap: nowrap;
@@ -1973,6 +1994,12 @@ template {
     margin-right: 0;
     margin-bottom: 105px;
   }
+  .office-name {
+    font-size: 20px;
+  }
+  .address-container div {
+    font-size: 20px;
+  }
   .location-block {
     flex-wrap: wrap;
   }
@@ -1981,7 +2008,7 @@ template {
   }
   .contact-inputs {
     max-width: 574px;
-    margin: 118px auto 0 auto !important;
+    margin: 30px auto 0 auto !important;
     padding: 0 0.5rem;
   }
   .credit-container {
@@ -2020,8 +2047,45 @@ template {
   .manager-title {
     letter-spacing: initial;
   }
+  .manager-contact .manager-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .manager-contact .small-extension {
+    font-size: 16px;
+    width: 100%;
+  }
+  .manager-contact a {
+    font-size: 16px;
+    line-height: 20px;
+  }
   .manager-contact-info {
     letter-spacing: initial;
+  }
+  .office-name {
+    font-size: 20px;
+  }
+  .address-container div {
+    font-size: 16px;
+  }
+  .contact-heading {
+    font-size: 16px;
+  }
+  .contact-heading + span {
+    font-size: 16px;
+  }
+  .contact-inputs {
+    margin-top: 30px !important;
+  }
+  .contact-inputs .send-button {
+    font-size: 20px;
+  }
+  .contact-inputs input, .contact-inputs textarea {
+    font-size: 16px;
+  }
+  .credits {
+    line-height: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 33.9em) {
@@ -2029,13 +2093,30 @@ template {
     padding: 0 15px;
   }
 }
+.project-blocks-container > div:last-child {
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 63.9em) {
+  .project-blocks-container {
+    margin-top: -55px;
+    align-items: center;
+    flex-direction: column;
+  }
   .project-blocks-container .project-block:last-child {
     margin: 0;
   }
+  .project-blocks-container > div:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
   .project-blocks-container {
-    align-items: center;
-    flex-direction: column;
+    margin-top: -105px;
+  }
+}
+@media screen and (max-width: 33.9em) {
+  .project-blocks-container {
+    margin-top: -70px;
   }
 }
 .testimonial-page {
@@ -2152,8 +2233,25 @@ template {
     margin-bottom: 0;
   }
 }
+.gallery-page .tns-outer {
+  position: relative;
+}
+.gallery-page .tns-controls {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: space-between;
+}
+.gallery-page .tns-controls button {
+  background: #75b7fa;
+  width: 60px;
+  height: 60px;
+}
 .section-title {
-  font-size: 33px;
+  font-size: 25px;
   letter-spacing: 4px;
   margin-bottom: 40px;
 }

@@ -17,21 +17,22 @@
 .project-block-inner {
   padding: 80px 0 0 100px;
   .title {
-    font-family: $primary-font;
+    @extend %pirmary-font-medium;
     text-transform: uppercase;
-    font-size: 33px;
-    font-weight: 400;
-    letter-spacing: 3px;
+    font-size: 25px;
     margin-bottom: 40px;
+    letter-spacing: 4px;
   }
 }
 .project-detail-container {
+  margin-top: -5px;
   div {
     @extend %pirmary-font-light;
     font-size: 25px;
     padding: 0.25rem 0;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-bottom: 10pxl
   }
 }
 .gallery-link {
@@ -43,7 +44,7 @@
   .project-block {
     flex-direction: column;
     align-items: center;
-    margin: 0 0 90px 0;
+    margin: 0 0 25px 0;
     max-width: 402px;
     min-width: 402px;
    
@@ -56,7 +57,13 @@
   .project-block-inner {
     padding: 0;
     .title {
-      margin: 55px 0 40px 0;
+      margin: 30px 0 30px 0;
+      font-size: 20px;
+    }
+  }
+  .project-detail-container {
+    div {
+      font-size: 20px;
     }
   }
   .project-block-contents {

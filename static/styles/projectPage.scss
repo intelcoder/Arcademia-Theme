@@ -1,11 +1,33 @@
+.project-blocks-container {
+  > div:last-child {
+      margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 63.9em) {
   .project-blocks-container {
+    margin-top: -55px;
+    align-items: center;
+    flex-direction: column;
     & .project-block:last-child {
       margin: 0;
     }
+    > div:last-child {
+      margin-bottom: 0;
+    }
   }
+ 
+}
+
+@media screen and (max-width: 767px) {
   .project-blocks-container {
-    align-items: center;
-    flex-direction: column;
+    margin-top: -105px;
+
   }
 }
+@media screen and (max-width: 33.9em) {
+  .project-blocks-container {
+    margin-top: -70px;
+  }
+}
+

@@ -247,6 +247,20 @@ function arcademia_customize_register( $wp_customize ) {
         'settings'   => 'contact_photography_credits',
         'type' => 'textarea'
     ));
+    // Gallery Page  Theme Customize
+    $wp_customize -> add_section('galleryPage', array(
+        'title'      => __( 'Gallery page', 'arcademia' ),
+        'priority'   => 30,
+    ));
+    $wp_customize -> add_setting('gallery_hero_image', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'gallery_hero_image', array(
+        'label'      => __( 'Gallery Hero Image', 'arcademia' ),
+        'section'    => 'galleryPage'   ,
+        'settings'   => 'gallery_hero_image',
+    )));
 
     // Profile Page  Theme Customize
     $wp_customize -> add_section('profilePage', array(
@@ -492,6 +506,32 @@ function contact_manager_post_type() {
             'not_found_in_trash' => __('No Manager Contact found in Trash', 'arcademia')
         ),
         'description'          => 'Manager contacts in the contact page',
+        'hierarchical'         => false,
+        'menu_icon'            => 'dashicons-networking',
+        'menu_position'        => 5,
+        'public'               => true,
+        'show_in_admin_bar'    => false,
+        'show_in_nav_menus'    => true,
+        'show_ui'              => true,
+        'supports'             => array('title')
+        ));
+}
+add_action( 'init', 'gallery_post_type' );
+function gallery_post_type() {
+    register_post_type( 'gallery',
+        array(
+        'labels' => array(
+            'name'               => __('Gallery Page - gallery', 'arcademia'),
+            'singular_name'      => __('Gallery', 'arcademia'),
+            'add_new_item'       => __('Add Gallery', 'arcademia'),
+            'edit_item'          => __('Edit Gallery', 'arcademia'),
+            'new_item'           => __('New Gallery', 'arcademia'),
+            'view_item'          => __('View Gallery', 'arcademia'),
+            'search_items'       => __('Search Gallery', 'arcademia'),
+            'not_found'          => __('No Gallery Found', 'arcademia'),
+            'not_found_in_trash' => __('No Gallery found in Trash', 'arcademia')
+        ),
+        'description'          => 'Gallery in the gallery page',
         'hierarchical'         => false,
         'menu_icon'            => 'dashicons-networking',
         'menu_position'        => 5,

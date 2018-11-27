@@ -6,11 +6,13 @@
  </div>
   <div class="project-block-contents">
     <div class="project-block-inner">
-      <div class="title"><?php echo($projectName) ?></div>
+      <div class="title"><?php echo($projectName); ?></div>
       <div class="project-detail-container">
         <div><?php echo($architect); ?></div>
         <div><?php echo($date); ?></div>
-        <div class="gallery-link">GALLERY ></div>
+        <?php if(!empty($url)) { ?>
+          <a href="<?php echo($url) ?>"><div class="gallery-link">GALLERY ></div></a>
+        <?php } ?>
       </div>
     </div>
   </div>

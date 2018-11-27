@@ -19,6 +19,7 @@
    ?>
 
   <div class="contact-page">
+  
   <?php
           $args = array('post_type' => 'locations');
           $query = new WP_Query($args);
@@ -27,10 +28,16 @@
         ?>
     <div class="location-block row no-margin">
       <div class="col-md-6 google-map">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=215+carlingview+drive&zoom=13&size=352x339&maptype=roadmap&markers=43.683742,-79.5929134" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.289581207223!2d-79.5951020845013!3d43.683742779120216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3990b737b27b%3A0x1808172ed020fbeb!2s215+Carlingview+Dr+%23305%2C+Etobicoke%2C+ON+M9W+5E8!5e0!3m2!1sen!2sca!4v1542673823465"
+       
+          frameborder="0"
+          style="border:0"
+          allowfullscreen>
+        </iframe>
       </div>
       <div class="col-md-6">
-        <div class="section-title"><?php echo(get_the_title())?></div>
+        <div class="section-title office-name"><?php echo(get_the_title())?></div>
         <div class="address-container">
           <div class=""><?php echo($meta['address'][0]) ?></div>
           <div><?php echo($meta['city'][0]) ?>, <?php echo($meta['provinceprovince'][0]) ?></div>

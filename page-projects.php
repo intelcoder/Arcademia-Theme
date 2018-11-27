@@ -22,11 +22,15 @@
         $args = array('post_type' => 'projects');
         $query = new WP_Query($args);
         while($query -> have_posts()) : $query -> the_post();
+        
         $meta = get_post_meta( get_the_ID() );
         $projectName = get_the_title();
         $architect = $meta['architect'][0];
         $date = $meta['date'][0];
-
+        $url = '';
+        if(!empty( $meta['gallery'][0])) {
+          $url = '/gallery/'.$meta['gallery'][0].'?project='.get_the_ID();
+        }
         include(locate_template('template-parts/project-block.php'));
       ?>
 
