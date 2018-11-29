@@ -1,6 +1,15 @@
 .gallery-page {
+  .gallery-slider-container {
+    position: relative;
+    margin-bottom: 120px;
+  }
+  .title-box {
+    margin-bottom: -60px;
+  }
   .tns-outer {
     position: relative;
+    margin: 0 auto;
+    max-width: calc(100% - 200px);
   }
   .tns-controls {
     display: flex;
@@ -10,13 +19,78 @@
     top: 50%;
     transform: translateY(-50%);
     justify-content: space-between;
-    button {
-      background: $primary-light-blue;
-      width: 60px;
-      height: 60px;
-      &:first-child {
+  }
+  .prev-button, .next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $primary-light-blue;
+   
+  }
+  .prev-button {
+    left: 10px;
+    transform: rotate(180deg);
+  }
+  .next-button {
+    right: 10px;
+  }
+}
+
+.project_name {
+  @extend %pirmary-font-medium;
+  letter-spacing: 8px;
+  font-size: 33px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.slider-img-container {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media screen and(max-width: 768px) {
+  .gallery-page {
+    .title-box {
+      margin-bottom: -90px;
+    }
+    .gallery-slider-container {
+      padding-bottom: 100px;
+      margin: 0;
+    }
+    .tns-outer {
+      max-width: 100%;
+    }
+    .prev-button, .next-button {
+      bottom: -10px;
+      top: inherit;
+    }
+    .prev-button {
+      left: 80px;
+    }
+    .next-button {
+      right: 80px;
+      transform: translate(0);
+    }
   
-      }
+
+  }
+
+}
+
+@media screen and (max-width: 33.9em) {
+  .gallery-page {
+    .title-box {
+      margin-bottom: -60px;
     }
   }
 }

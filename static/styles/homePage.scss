@@ -1,7 +1,10 @@
 .home-hero {
   position: relative;
 }
-
+.home-container {
+  max-width: initial !important;
+  padding: 0 !important;
+}
 .years-upper-text {
   font-size: 30px;
   text-transform: uppercase;
@@ -26,7 +29,24 @@
   font-style: italic;
   letter-spacing: 4px;
 }
-
+.profile-project-image-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 350px;
+}
+.review-container {
+  padding: 0 10px;
+}
+@media screen and (min-width: 1024px) {
+  .profile-project-container {
+    overflow: hidden;
+    height: 450px;
+    .project-box-inner > div, .profile-box-inner > div {
+      width: 450px;
+    }
+  }
+}
 @media screen and (min-width: $small-screen-break) {
   .home-hero-content-container {
     position: absolute;
@@ -54,6 +74,9 @@
     max-width: 630px;
   
     display: flex !important;
+  }
+  .profile-project-image-container {
+    height: 350px; 
   }
   .hero-content {
     margin: 3rem 3rem 1.1rem 3rem;

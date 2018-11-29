@@ -69,11 +69,13 @@
 @media screen and (max-width: 767px) {
   .page-link-block-inner {
     padding: 30px;
+    height: auto;
     > div {
       padding: 0;
     }
   }
   .page-link-block {
+    max-height: 300px;
     height: auto;
   }
   .first-link-container,

@@ -58,6 +58,17 @@
 @media screen and (max-width: 63.9em) {
   .profile-page-container {
     padding: 0 0.5rem;
+     .profile-text {
+      margin: 0 0 55px 0;
+    }
+  }
+  .profile-page-container-bottom {
+    .profile-text {
+      margin: 0 0 55px 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
   .profile {
     margin-bottom: 90px;
@@ -65,7 +76,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .profile-page-container {
     max-width: $max-content-width-sm;
     margin: -2rem auto 0 auto;
@@ -75,10 +86,13 @@
     margin: 0 auto 0 auto;
     max-width: $max-content-width-sm;
     padding: 0 15px;
+    .profile-text {
+      margin: 0 0 90px 0;
+    }
   }
   .profile-bg-section {
     height: 363px;
-    margin-bottom: 90px;
+    margin: 90px 0;
   }
   .profile-text {
     margin: 0 0 90px 0;
@@ -89,6 +103,7 @@
       margin: 0;
     }
   }
+  
   .bg-text {
     max-width: 450px;
     width: 80%;

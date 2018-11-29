@@ -25,11 +25,15 @@
       </div>
   </div>
 </div>
-<div class="main-body-container">
+<div class="main-body-container home-container">
   <div class="profile-project-container row no-margin">
     <div class="row full-width  no-margin">
-      <div class="col-sm-6 col-md-6 first-md first-sm no-padding">
-        <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_profile_image' ) ); ?>"/>
+      <div
+       class="col-sm-6 col-md-6 first-md first-sm no-padding profile-project-image-container"
+       style="background-image: url(<?php echo esc_url( get_theme_mod( 'home_profile_image' ) );  ?>)"
+    
+      >
+       
       </div>
       <div class="col-sm-6 col-md-6 first-xs no-padding profile-project-col">
         <div class="profile-box">
@@ -65,8 +69,11 @@
             </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-6 no-padding ">
-        <img class="profile-image" src="<?php echo esc_url( get_theme_mod( 'home_project_image_setting' ) ); ?>"/>
+      <div
+       class="col-sm-6 col-md-6 no-padding profile-project-image-container"
+       style="background-image: url(<?php echo esc_url( get_theme_mod( 'home_project_image_setting' ) );  ?>)" 
+      >
+    
       </div>
     </div>
   </div>
