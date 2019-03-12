@@ -26,6 +26,9 @@
     margin: 0;
   }
 }
+.bright-filter {
+  filter: brightness(80%);
+}
 .bg-text {
   @extend %pirmary-font-medium;
   max-width: 534px;

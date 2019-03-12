@@ -20,6 +20,7 @@ add_action( 'after_setup_theme', 'arcademia_setup' );
 // Styles & Scripts
 function arcademia_scripts() {
     wp_enqueue_script( 'hamburger-js', get_template_directory_uri() . '/static/js/hamburger.js', false );
+    wp_enqueue_script( 'lazysizes-js', get_template_directory_uri() . '/static/js/lazysizes.js', false );
     // styles will be automatically added through sass plugin
 }
 add_action( 'wp_enqueue_scripts', 'arcademia_scripts' );
@@ -282,6 +283,18 @@ function arcademia_customize_register( $wp_customize ) {
         'transport'         => 'refresh',
         'height'         => 325,
     ));
+
+    $wp_customize -> add_setting('profile_project_image', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'profile_project_image', array(
+        'label'      => __( 'Profile Project Image', 'arcademia' ),
+        'section'    => 'profilePage',
+        'settings'   => 'profile_project_image',
+    )));
+
 
     $wp_customize -> add_control('profile_hero_box_subtitle', array(
         'label' => __('Hero Box Subtitle', 'arcademia'),

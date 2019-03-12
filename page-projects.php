@@ -22,8 +22,10 @@
         $args = array('post_type' => 'projects');
         $query = new WP_Query($args);
         while($query -> have_posts()) : $query -> the_post();
-        
+       
         $meta = get_post_meta( get_the_ID() );
+        $imgUrl = wp_get_attachment_image_src($meta['project_image'][0], 'large');
+        $imgUrl = $imgUrl[0];
         $projectName = get_the_title();
         $architect = $meta['architect'][0];
         $date = $meta['date'][0];

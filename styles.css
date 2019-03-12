@@ -1037,14 +1037,13 @@ template {
   letter-spacing: 2px;
 }
 .logo-with-line {
-  width: 50%;
+  width: 100%;
   align-items: center;
   flex-wrap: nowrap;
 }
 .logo-with-line .white-line {
   width: calc(100% - 135px);
-  max-width: 354px;
-  margin: 0 40px;
+  margin: 0 50px 0 40px;
 }
 .header-inner-container {
   padding: 0 60px;
@@ -1451,6 +1450,14 @@ template {
   height: auto;
   display: block;
 }
+@media screen and (min-width: 1440px) {
+  .hero-image-container {
+    max-height: 702px;
+  }
+  .hero-image-container img {
+    transform: translateY(-12vw);
+  }
+}
 .title-box {
   width: 635px;
   height: 190px;
@@ -1732,7 +1739,7 @@ template {
   .home-hero-content-container {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 100px;
     transform: translateY(-50%);
   }
   .year-period {
@@ -1817,6 +1824,9 @@ template {
 }
 .profile-page-container-bottom .profile-text {
   margin: 0;
+}
+.bright-filter {
+  filter: brightness(80%);
 }
 .bg-text {
   max-width: 534px;
@@ -2028,10 +2038,12 @@ template {
   }
 }
 @media screen and (max-width: 63.9em) {
+  .contact-page {
+    margin-top: -70px;
+  }
   .google-map {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 105px;
   }
   .office-name {
     font-size: 20px;
@@ -2496,16 +2508,11 @@ a {
   float: right;
   margin-top: 2rem;
 }
+.review-block {
+  padding: 0 30px;
+}
 .home-hero-content-container {
   display: block;
-}
-@media screen and (min-width: 1440px) {
-  .hero-image-container {
-    max-height: 702px;
-  }
-  .hero-image-container img {
-    transform: translateY(-7vw);
-  }
 }
 @media screen and (max-width: 1035px) and (min-width: 900px) {
   .profile-image {
@@ -2584,6 +2591,7 @@ a {
   }
   .review-block {
     margin: 0 0 50px 0;
+    padding: 0;
   }
   .review-block:last-child {
     margin-bottom: 0;

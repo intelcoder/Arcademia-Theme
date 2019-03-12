@@ -153,10 +153,13 @@ $input-font-size: 20px;
   }
 }
 @media screen and (max-width: $large-screen-break) {
+  .contact-page { 
+    margin-top: -70px;
+  }
   .google-map {
     width: 100%;
     margin-right: 0;
-    margin-bottom :105px;
+    
     img {
       @extend %responsive-image;
     }
