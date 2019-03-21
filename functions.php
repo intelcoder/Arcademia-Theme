@@ -554,4 +554,5 @@ function gallery_post_type() {
         'show_ui'              => true,
         'supports'             => array('title')
         ));
+        flush_rewrite_rules();
 }
