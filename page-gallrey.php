@@ -22,26 +22,34 @@
     $project = get_post($_GET['project']);
     $project_title = $project->post_title;
   }
-
+$args = array(
+'post_type' => 'gallery',
+'posts_per_page' => -1,
+'post_status' => 'publish'
+);
+$loop = new Wp_Query($args);
  ?>
  <?php include(locate_template('template-parts/hero.php')); ?>
  <div class="main-body-container gallery-page">
  <?php
     include(locate_template('template-parts/hero-text-box.php'))
    ?>
-   
-  <div class="project_name"><?php echo($project_title ? ($project_title) : ''); ?></div>
+   <?php if($loop->have_posts()) :  ?>
   <div class='gallery-slider-container'>
+   <?php while($loop->have_posts()) : $loop->the_post(); 
+   $img = get_the_post_thumbnail_url($post->ID, 'full'); 
+   ?>
+  <div class="project_name"><?php the_title(); ?></div>
     <div class='gallery-slider'>
       <?php 
       
-         foreach(preg_split('/>/' ,trim($images)) as $img) {
-          if(!empty($img))
-          // add splited > 
-          echo('<div class="slider-img-container">'.$img.'></div>');
+         
+          if(!empty($img)) {
+          echo('<div class="slider-img-container"><img src="'.$img.'" alt="'.get_the_title().'"></div>');
         }
       ?>
     </div>
+	<?php endwhile; ?>
     <div class="prev-button">
       <svg
        enable-background="new 0 0 15 26"
@@ -70,6 +78,7 @@
       </svg>
     </div>
   </div>
+  <?php endif; ?>
 </div>
 <?php 
   $left['link'] = "/testimonials";

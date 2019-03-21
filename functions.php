@@ -552,7 +552,9 @@ function gallery_post_type() {
         'show_in_admin_bar'    => false,
         'show_in_nav_menus'    => true,
         'show_ui'              => true,
-        'supports'             => array('title')
+        'supports'             => array('title','thumbnail')
         ));
         flush_rewrite_rules();
 }
+//add featured image support in theme
+add_theme_support( 'post-thumbnails' ); 
