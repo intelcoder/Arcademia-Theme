@@ -34,7 +34,6 @@
         if(!empty( $meta['gallery'][0])) {
           $post_meta = get_post($meta['gallery'][0]);
           $title = $post_meta->post_title;
-          var_dump($title);
           $url = '/gallery/'.$title.'?project='.get_the_ID();
         }
         include(locate_template('template-parts/project-block.php'));
