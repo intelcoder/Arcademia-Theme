@@ -39,7 +39,7 @@ $loop = new Wp_Query($args);
    <?php while($loop->have_posts()) : $loop->the_post(); 
    $img = get_the_post_thumbnail_url($post->ID, 'full'); 
    ?>
-  <div class="project_name"><?php the_title(); ?></div>
+  <div class="project_name"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></div>
     <div class='gallery-slider'>
       <?php 
       
