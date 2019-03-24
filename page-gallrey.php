@@ -36,11 +36,12 @@ $loop = new Wp_Query($args);
    ?>
    <?php if($loop->have_posts()) :  ?>
   <div class='gallery-slider-container'>
+  <div class='gallery-slider'>
    <?php while($loop->have_posts()) : $loop->the_post(); 
    $img = get_the_post_thumbnail_url($post->ID, 'full'); 
    ?>
   <div class="project_name"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></div>
-    <div class='gallery-slider'>
+  
       <?php 
       
          
@@ -48,8 +49,9 @@ $loop = new Wp_Query($args);
           echo('<div class="slider-img-container"><img src="'.$img.'" alt="'.get_the_title().'"></div>');
         }
       ?>
-    </div>
+  
 	<?php endwhile; ?>
+  </div>
     <div class="prev-button">
       <svg
        enable-background="new 0 0 15 26"
@@ -77,8 +79,9 @@ $loop = new Wp_Query($args);
         <polygon fill="white" points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 "/>
       </svg>
     </div>
+	<?php endif; ?>
   </div>
-  <?php endif; ?>
+  
 </div>
 <?php 
   $left['link'] = "/testimonials";
@@ -88,7 +91,7 @@ $loop = new Wp_Query($args);
   include(locate_template('template-parts/page-bottom-links.php'));
 ?>
 
- <?php get_footer(); wp_footer(); ?>
+ <?php get_footer();  ?>
  <script type="text/javascript">
   var slider = tns({
     container: '.gallery-slider',
@@ -103,7 +106,3 @@ $loop = new Wp_Query($args);
     nextButton: document.querySelector('.next-button'),
   });
   </script>
-</body>
-</html>
-
-
