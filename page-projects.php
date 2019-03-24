@@ -34,8 +34,12 @@
         $title = $post_meta->post_title;
        // var_dump($title);
        // $url = '/gallery/'.$title.'?project='.get_the_ID();
-        $gallery_id = get_post_meta(get_the_ID(),'select_gallery',true);
+          $gallery_id = get_post_meta(get_the_ID(),'select_gallery',true);
+          if(!empty($gallery_id)) {
            $url = get_the_permalink($gallery_id);
+          } else {
+            $url = "#";
+          }
         include(locate_template('template-parts/project-block.php'));
       ?>
 

@@ -10,9 +10,7 @@
       <div class="project-detail-container">
         <div><?php echo($architect); ?></div>
         <div><?php echo($date); ?></div>
-        <?php if(!empty($url)) { ?>
-          <a href="<?php echo($url) ?>"><div class="gallery-link">GALLERY ></div></a>
-        <?php } ?>
+          <a href="<?php echo $url; ?>"><div class="gallery-link">GALLERY ></div></a>
       </div>
     </div>
   </div>
