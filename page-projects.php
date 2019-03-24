@@ -24,6 +24,7 @@
         while($query -> have_posts()) : $query -> the_post();
        
         $meta = get_post_meta( get_the_ID() );
+      
         $imgUrl = wp_get_attachment_image_src($meta['project_image'][0], 'large');
         $imgUrl = $imgUrl[0];
         $projectName = get_the_title();
@@ -31,7 +32,9 @@
         $date = $meta['date'][0];
         $url = '';
         if(!empty( $meta['gallery'][0])) {
-          $url = '/gallery/'.$meta['gallery'][0].'?project='.get_the_ID();
+          $post_meta = get_post($meta['gallery'][0]);
+          $title = $post_meta->post_title;
+          $url = '/gallery/'.$title.'?project='.get_the_ID();
         }
         include(locate_template('template-parts/project-block.php'));
       ?>
