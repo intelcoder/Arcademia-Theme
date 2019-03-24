@@ -30,9 +30,12 @@
         $architect = $meta['architect'][0];
         $date = $meta['date'][0];
         $url = '';
-        if(!empty( $meta['gallery'][0])) {
-          $url = '/gallery/'.$meta['gallery'][0].'?project='.get_the_ID();
-        }
+        $post_meta = get_post($meta['gallery'][0]);
+        $title = $post_meta->post_title;
+       // var_dump($title);
+       // $url = '/gallery/'.$title.'?project='.get_the_ID();
+        $gallery_id = get_post_meta(get_the_ID(),'select_gallery',true);
+           $url = get_the_permalink($gallery_id);
         include(locate_template('template-parts/project-block.php'));
       ?>
 

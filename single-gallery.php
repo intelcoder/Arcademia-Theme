@@ -25,9 +25,11 @@
 ?>
  <?php include(locate_template('template-parts/hero.php')); ?>
  <div class="main-body-container gallery-page">
+ 
  <?php
     include(locate_template('template-parts/hero-text-box.php'));
    ?>
+
    <?php
    /* Start the Loop */
    while ( have_posts() ) : the_post();
