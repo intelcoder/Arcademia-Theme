@@ -13,6 +13,7 @@ function inline_svg_func($name) {
   $file .= "/static/svgs/" . $name . ".svg";
   include($file);
 }
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -30,8 +31,7 @@ function inline_svg_func($name) {
   <div class="row header-inner-container between-sm between-md middle-sm middle-md">
     <div class="row logo-with-line">
       <a href='/' class="logo-container">
-        <div>ARCADEMIA</div>
-        <div class="sub">GROUP INC.</div>
+        <img src="http://wordpresslocal-clone.local/wp-content/uploads/2019/04/Logo.png" />
       </a>
       <div class="white-line"></div>
     </div>

@@ -38,10 +38,10 @@
     <div class="main-body-container ">
       <div class="row profile-page-container profile-page-container-bottom">
         <div class="col-md-6 profile-text">
-          <?php echo get_theme_mod('top_right_text') ?>
+          <?php echo get_theme_mod('bottom_left_text') ?>
         </div>
         <div class="col-md-6 profile-text">
-          <?php echo get_theme_mod('top_left_text') ?>
+          <?php echo get_theme_mod('bottom_right_text') ?>
         </div>
       </div>
       </div>
@@ -50,8 +50,8 @@
 <?php 
   $right['link'] = "/testimonials";
   $right['label'] = 'TESTIMONIALS';
-  $left['link'] = "/contact";
-  $left['label'] = 'CONTACT US';
+  $left['link'] = "/projects";
+  $left['label'] = 'Projects';
   include(locate_template('template-parts/page-bottom-links.php'));
 ?>
 </div>

@@ -1516,10 +1516,15 @@ template {
     height: 100px;
   }
   .title-box-title {
-    font-size: 35px;
+    font-size: 4.5vw;
   }
   .title-box-sub {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .title-box-title {
+    font-size: 6.5vw;
   }
 }
 .project-block {
@@ -1552,6 +1557,9 @@ template {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 10pxl;
+}
+.project-detail-container .gallery-link {
+  padding: 0 !important;
 }
 .gallery-link {
   letter-spacing: 4px;

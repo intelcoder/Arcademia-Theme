@@ -8,9 +8,13 @@
     <div class="project-block-inner">
       <div class="title"><?php echo($projectName); ?></div>
       <div class="project-detail-container">
-        <div><?php echo($architect); ?></div>
+      <?php
+        if(!empty($architect)) { 
+         echo('<div>'.$architect.'</div>'); 
+        }
+         ?>
         <div><?php echo($date); ?></div>
-          <a href="<?php echo $url; ?>"><div class="gallery-link">GALLERY ></div></a>
+          <a href="<?php echo $url; ?>"><div class="gallery-link">GALLERY <span>></span></div></a>
       </div>
     </div>
   </div>

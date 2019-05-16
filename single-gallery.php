@@ -13,8 +13,8 @@
   get_header();
   $heroImageSrc = get_theme_mod( 'contact_hero_image' );
   $imageAlt = "Acardemia Project Hero";
-  $subTitle = get_theme_mod('contact_hero_box_subtitle');
-  $title = get_theme_mod('contact_hero_box_title');
+  $subTitle = get_theme_mod('gallery_hero_box_subtitle');
+  $title = get_theme_mod('gallery_hero_box_title');
   $str = $_SERVER['REQUEST_URI'];
   preg_match('/\/gallery\/(?P<id>\d+)/', $str, $matches);
   $images =  (get_post_meta( $matches['id'])['project_images'][0]);

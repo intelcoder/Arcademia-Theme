@@ -46,6 +46,26 @@ add_theme_support( 'custom-header', $header_info );
 
 function arcademia_customize_register( $wp_customize ) { 
     // Home Page
+
+    $wp_customize -> add_section('header', array(
+        'title'      => __( 'Header', 'arcademia' ),
+        'priority'   => 30,
+    ));
+    $wp_customize -> add_setting('header_logo', array(
+        'default' => _x('Custom', 'arcademia'),
+        'transport'      => 'refresh',
+        'height'         => 325,
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control( new WP_Customize_Image_Control( $wp_customize, 'header_logo', array(
+        'label'      => __( 'Site Logo Image', 'arcademia' ),
+        'section'    => 'header',
+        'settings'   => 'header_logo',
+        'priority'   => 1,
+        
+    )));
+
     // Home profile section
     $wp_customize -> add_section('homepage', array(
         'title'      => __( 'Home page', 'arcademia' ),
@@ -262,6 +282,29 @@ function arcademia_customize_register( $wp_customize ) {
         'section'    => 'galleryPage'   ,
         'settings'   => 'gallery_hero_image',
     )));
+    $wp_customize -> add_setting('gallery_hero_box_title', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('gallery_hero_box_title', array(
+        'label' => __('Hero Box title', 'arcademia'),
+        'section' => 'galleryPage',
+        'settings'   => 'gallery_hero_box_title',
+    ));
+    $wp_customize -> add_setting('gallery_hero_box_subtitle', array(
+        'transport'         => 'refresh',
+        'height'         => 325,
+    ));
+
+    $wp_customize -> add_control('gallery_hero_box_subtitle', array(
+        'label' => __('Hero Box Subtitle', 'arcademia'),
+        'section' => 'galleryPage',
+        'settings'   => 'gallery_hero_box_subtitle',
+    ));
+
+    
+ 
 
     // Profile Page  Theme Customize
     $wp_customize -> add_section('profilePage', array(
@@ -449,6 +492,35 @@ function testimonials_post_type() {
         'supports'             => array('title')
         ));
 }
+
+add_action( 'init', 'prev_works_post_type' );
+function prev_works_post_type() {
+    register_post_type( 'prev_works',
+        array(
+        'labels' => array(
+            'name'               => __('Testimonial - Prev Works', 'arcademia'),
+            'singular_name'      => __('Prev Works', 'arcademia'),
+            'add_new_item'       => __('Add Prev Works', 'arcademia'),
+            'edit_item'          => __('Edit Prev Works', 'arcademia'),
+            'new_item'           => __('New Prev Works', 'arcademia'),
+            'view_item'          => __('View Prev Works', 'arcademia'),
+            'search_items'       => __('SearchPrev Works', 'arcademia'),
+            'not_found'          => __('No Prev Works Found', 'arcademia'),
+            'not_found_in_trash' => __('No Prev Works found in Trash', 'arcademia')
+        ),
+        'description'          => 'Prev works in testimonial page',
+        'hierarchical'         => false,
+        'menu_icon'            => 'dashicons-networking',
+        'menu_position'        => 6,
+        'public'               => true,
+        'show_in_admin_bar'    => false,
+        'show_in_nav_menus'    => true,
+        'show_ui'              => true,
+        'supports'             => array('title')
+        ));
+}
+
+
 add_action( 'init', 'projects_post_type' );
 function projects_post_type() {
     register_post_type( 'Projects',

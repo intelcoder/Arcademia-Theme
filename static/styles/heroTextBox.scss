@@ -1,73 +1,76 @@
-
 .title-box {
-  @extend %flex-center-vh;
-  width: 635px;
-  height: 190px;
-  padding-bottom: 2rem;
-  position: relative;
-  background-color: white;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-transform: uppercase;
+	@extend %flex-center-vh;
+	width: 635px;
+	height: 190px;
+	padding-bottom: 2rem;
+	position: relative;
+	background-color: white;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-transform: uppercase;
 }
 .title-box-inner {
-  @extend %flex-center-vh;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 25px;
-  border: 1px solid $primary-light-blue;
-  height: 100%;
-  text-transform: uppercase;
-  > div {
-    margin-top: -3px;
-  }
+	@extend %flex-center-vh;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 25px;
+	border: 1px solid $primary-light-blue;
+	height: 100%;
+	text-transform: uppercase;
+	> div {
+		margin-top: -3px;
+	}
 }
 .title-box-title {
-  letter-spacing: 14px;
-  font-size: 60px;
-  font-weight: bold;
-  font-family: $primary-font;
-  transform: translateX(8px);
+	letter-spacing: 14px;
+	font-size: 60px;
+	font-weight: bold;
+	font-family: $primary-font;
+	transform: translateX(8px);
 }
 
 .title-box-sub {
-  letter-spacing: 3px;
-  color: $primary-light-blue;
-  font-size: 30px;
-  font-family: $primary-font;
-  font-weight: 500;
-  text-align: center;
-  margin: 0.25rem 0;
+	letter-spacing: 3px;
+	color: $primary-light-blue;
+	font-size: 30px;
+	font-family: $primary-font;
+	font-weight: 500;
+	text-align: center;
+	margin: 0.25rem 0;
 }
-
 
 @media screen and (max-width: 767px) {
-  .title-box {
-    width: 400px;
-    height: 165px;
+	.title-box {
+		width: 400px;
+		height: 165px;
 
-    padding-bottom: 4rem;
-  }
+		padding-bottom: 4rem;
+	}
 
-  .title-box-title {
-    font-size: 41px;
-    letter-spacing: 8px;
-  }
-  .title-box-sub {
-    font-size: 25px;
-  }
-
+	.title-box-title {
+		font-size: 41px;
+		letter-spacing: 8px;
+	}
+	.title-box-sub {
+		font-size: 25px;
+	}
 }
 @media screen and (max-width: 33.9em) {
-  .title-box {
-    width: 320px;
-    height: 100px;
-  }
-  .title-box-title {
-    font-size: 35px;
-  }
-  .title-box-sub {
-    font-size: 18px;
-  }
+	.title-box {
+		width: 320px;
+		height: 100px;
+	}
+	.title-box-title {
+		font-size: 4.5vw;
+	}
+	.title-box-sub {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.title-box-title {
+		font-size: 6.5vw;
+	}
 }

@@ -43,8 +43,6 @@ $loop = new Wp_Query($args);
   <div class="project_name"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></div>
   
       <?php 
-      
-         
           if(!empty($img)) {
           echo('<div class="slider-img-container"><img src="'.$img.'" alt="'.get_the_title().'"></div>');
         }
