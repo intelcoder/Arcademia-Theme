@@ -11,17 +11,12 @@
   $imageAlt = "Acardemia Testimonials Hero";
   $subTitle = get_theme_mod('tesitmonial_hero_box_subtitle');
   $title = get_theme_mod('testimonial_hero_box_title');
-
- 
-  
 ?>
 <?php include(locate_template('template-parts/hero.php')); ?>
 <div class="main-body-container ">
-<?php
+   <?php
     include(locate_template('template-parts/hero-text-box.php'));
    ?>
-
-
 </div>
 <div class="main-body-container ">
   <div class="row testimonial-page">
@@ -49,23 +44,30 @@
       </div>
       <div class="features-container">
         <div class="row no-margin featured-link">
-        <?php
-          $args = array('post_type' => 'prev_works');
-          $query = new WP_Query($args);
-          while($query -> have_posts()) : $query -> the_post();
-          $exploded_title = explode( ' ', strtoupper(get_the_title($post)));
-          $meta = get_post_meta( get_the_ID());
-          $file_url = wp_get_attachment_url($meta['pdf'][0])
-     
-          ?>
-           <a href=<?php echo($file_url) ?> class="col-md-3 ">
-            <div>
-              <?php echo($exploded_title[0]) ?>
-            </div>
-            <div>
-              <?php echo($exploded_title[1]) ?>
-            </div>
-          </a>
+          <?php
+            $args = array('post_type' => 'prev_works');
+            $query = new WP_Query($args);
+            while($query -> have_posts()) : $query -> the_post();
+            $exploded_title = strtoupper(get_the_title($post));
+            $meta = get_post_meta( get_the_ID());
+            $file_url = wp_get_attachment_url($meta['pdf'][0]);
+            $news_link = $meta['news_link'][0];
+            ?>
+            <a
+             href=<?php
+              if($news_link) {
+                echo($news_link);
+              } else if($file_url) {
+                echo($file_url);
+              }
+            ?>
+            target="_blank"
+            class="col-md-3 col-sm-3 col-xs-12">
+              <div>
+                <?php echo(get_the_title($post)) ?>
+              </div>
+            
+            </a>
           <?php endwhile; ?>
         </div>
       </div>

@@ -2284,6 +2284,7 @@ template {
     margin: 0 0 36px 0;
   }
   .featured-link div {
+    margin: 15px 0;
     font-size: 20px;
     text-align: center;
     line-height: 25px;
